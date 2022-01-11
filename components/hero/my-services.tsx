@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Container2, Container3 } from "../container";
+import { Container1, Container4 } from "../container";
 import { SectionDash } from "../dash";
 
 const HeroServices = () => {
   return (
     <ServicesContainer>
-      <SectionDash text="my services" />
+      <SectionDash text="my services" rightDash />
       <ServicesContent>
         <ServicesFlex>
           <ServiceItem>Branding</ServiceItem>
@@ -24,7 +24,7 @@ const HeroServices = () => {
 
 const ServicesContainer = styled.div`
   margin-top: 6rem;
-  ${Container2}
+  ${Container1}
 
   ${({ theme }) => theme.media.lg} {
     margin-top: 3rem;
@@ -32,7 +32,7 @@ const ServicesContainer = styled.div`
 `;
 
 const ServicesContent = styled.div`
-  ${Container3}
+  ${Container4}
   padding-top: 2rem;
 `;
 
@@ -57,6 +57,8 @@ const ServiceItem = styled.span`
   ${({ theme }) => theme.media.lg} {
     min-width: 48%;
   }
+
+  transition: 0.3s color;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};

@@ -22,6 +22,8 @@ export const Container1 = css`
   }
 `;
 
+1;
+
 export const Container2 = css`
   padding: 0.5rem 6.2rem;
 
@@ -32,6 +34,14 @@ export const Container2 = css`
 
 export const Container3 = css`
   padding: 1rem 6.9rem;
+
+  ${({ theme }) => theme.media.lg} {
+    padding: 1rem 0;
+  }
+`;
+
+export const Container4 = css`
+  padding: 1rem 1.8rem;
 
   ${({ theme }) => theme.media.lg} {
     padding: 1rem 0;
