@@ -4,8 +4,7 @@ import { Fonts } from "./fonts";
 export const GlobalStyles = createGlobalStyle`
     ${Fonts};
 
-    *
-    {
+    *, *:before, *:after {
         box-sizing: border-box;
     }
 

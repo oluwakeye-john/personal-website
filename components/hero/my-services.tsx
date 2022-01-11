@@ -13,7 +13,7 @@ const HeroServices = () => {
           <ServiceItem>Mobile Development</ServiceItem>
         </ServicesFlex>
         <ServicesFlex>
-          <ServiceItem>SEO/Marketing</ServiceItem>
+          <ServiceItem>SEO/Marketing &nbsp; &nbsp;</ServiceItem>
           <ServiceItem>Motion & Illustration</ServiceItem>
           <ServiceItem />
         </ServicesFlex>
@@ -26,8 +26,11 @@ const ServicesContainer = styled.div`
   margin-top: 6rem;
   ${Container1}
 
+  margin-bottom: 6rem;
+
   ${({ theme }) => theme.media.lg} {
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -55,7 +58,7 @@ const ServiceItem = styled.span`
   line-height: 94.5%;
 
   ${({ theme }) => theme.media.lg} {
-    min-width: 48%;
+    min-width: 45%;
   }
 
   transition: 0.3s color;

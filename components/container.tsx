@@ -18,7 +18,6 @@ export const Container1 = css`
 
   ${({ theme }) => theme.media.sm} {
     padding: 1.5rem 1.5rem;
-    flex-direction: column;
   }
 `;
 
@@ -45,5 +44,22 @@ export const Container4 = css`
 
   ${({ theme }) => theme.media.lg} {
     padding: 1rem 0;
+  }
+`;
+
+export const Container5 = css`
+  padding-left: 29.3%;
+  padding-right: 5%;
+
+  ${({ theme }) => theme.media.xxl} {
+    padding: 0 8rem;
+  }
+
+  ${({ theme }) => theme.media.lg} {
+    padding: 0 9rem;
+  }
+
+  ${({ theme }) => theme.media.md} {
+    padding: 0 2.5rem;
   }
 `;

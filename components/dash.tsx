@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface ISectionDash {
   text: string;
-  rightDash: boolean;
+  rightDash?: boolean;
 }
 
 export const SectionDash = ({ text, rightDash }: ISectionDash) => {

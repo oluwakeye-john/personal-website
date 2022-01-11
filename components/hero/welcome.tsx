@@ -2,19 +2,18 @@
 
 import styled from "styled-components";
 import { SectionDash } from "../dash";
+import Quote from "../quote";
 
 const HeroWelcome = () => {
   return (
     <WelcomeContainer>
       <TopFlex>
         <WelcomeLeft />
-        <WelcomeRight>
-          <WelcomeText>
-            Welcome to my little corner of the web, where I'll be sharing notes,
+        <Quote
+          text="Welcome to my little corner of the web, where I'll be sharing notes,
             code snippets, and resources on topics that interest me and updates
-            on projects I'm working on.
-          </WelcomeText>
-        </WelcomeRight>
+            on projects I'm working on."
+        />
       </TopFlex>
       <BottomFlex>
         <WelcomeLeftAlt>
