@@ -2,57 +2,63 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import styled from "styled-components";
-import Dash from "../dash";
+import { Container2, Container3 } from "../container";
+import { Dash } from "../dash";
 
 const HeroAbout = () => {
   return (
     <AboutWrapper>
-      <HeroTitle>
-        breathing
-        <br />
-        pixels
-      </HeroTitle>
-      <AboutContainer>
-        <AboutContent>
-          <AboutSection1>
-            <AboutSection1Content>
-              <InlineBlock>
-                <AboutSectionTitle>john</AboutSectionTitle>
-                <Dash />
-              </InlineBlock>
-              <AboutSectionTitle>beloved</AboutSectionTitle>
-              <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
-              <AboutSection1Tag>Software Developer</AboutSection1Tag>
-            </AboutSection1Content>
-            <AboutImage>
-              <img alt="Me" src="/me6.png" />
-            </AboutImage>
-          </AboutSection1>
-          <AboutSection2>
-            <AboutSectionTitle>about me</AboutSectionTitle>
-            <AboutText>
-              Welcome to my little corner of the web, where I'll be sharing
-              notes, code snippets, and resources on topics that interest me and
-              updates on projects I'm working on.
-            </AboutText>
-            <AboutText>
-              Where I'll be sharing notes, code snippets, and resources on
-              topics that interest me and updates on projects.
-            </AboutText>
-          </AboutSection2>
-        </AboutContent>
-      </AboutContainer>
+      <Relative>
+        <HeroTitle>
+          breathing
+          <br />
+          pixels
+        </HeroTitle>
+        <AboutContainer>
+          <AboutContent>
+            <AboutSection1>
+              <AboutSection1Content>
+                <InlineBlock>
+                  <AboutSectionTitle>john</AboutSectionTitle>
+                  <Dash />
+                </InlineBlock>
+                <AboutSectionTitle>beloved</AboutSectionTitle>
+                <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
+                <AboutSection1Tag>Software Developer</AboutSection1Tag>
+              </AboutSection1Content>
+              <AboutImage>
+                <img alt="Me" src="/me6.png" />
+              </AboutImage>
+            </AboutSection1>
+            <AboutSection2>
+              <AboutSectionTitle>about me</AboutSectionTitle>
+              <AboutText>
+                Welcome to my little corner of the web, where I'll be sharing
+                notes, code snippets, and resources on topics that interest me
+                and updates on projects I'm working on.
+              </AboutText>
+              <AboutText>
+                Where I'll be sharing notes, code snippets, and resources on
+                topics that interest me and updates on projects.
+              </AboutText>
+            </AboutSection2>
+          </AboutContent>
+        </AboutContainer>
+      </Relative>
     </AboutWrapper>
   );
 };
 
 const AboutWrapper = styled.div`
-  position: relative;
-  margin: 0.5rem 6.2rem;
+  ${Container2}
 
   ${({ theme }) => theme.media.lg} {
-    margin: 0;
+    padding: 0;
   }
+`;
+
+const Relative = styled.div`
+  position: relative;
 `;
 
 const HeroTitle = styled.h2`
@@ -69,15 +75,18 @@ const HeroTitle = styled.h2`
     font-size: 80px;
     line-height: 94.5%;
   }
+
+  ${({ theme }) => theme.media.xs} {
+    font-size: 70px;
+  }
 `;
 
 const AboutContainer = styled.div`
-  padding: 1rem 6.9rem;
+  ${Container3}
   padding-top: 9.7rem;
 
   ${({ theme }) => theme.media.lg} {
     margin-top: 0;
-    padding: 1rem 0;
     padding-top: 7.5rem;
   }
 `;
@@ -88,7 +97,8 @@ const AboutContent = styled.div`
 
   ${({ theme }) => theme.media.lg} {
     flex-direction: column;
-    height: 300px;
+    height: auto;
+    /* height: 300px; */
   }
 `;
 
@@ -152,6 +162,15 @@ const AboutImage = styled.div`
     width: auto;
     height: 100%;
     object-fit: contain;
+  }
+
+  ${({ theme }) => theme.media.lg} {
+    height: 280px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 

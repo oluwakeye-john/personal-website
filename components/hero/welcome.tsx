@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import styled from "styled-components";
-import Dash from "../dash";
+import { SectionDash } from "../dash";
 
 const HeroWelcome = () => {
   return (
@@ -18,8 +18,7 @@ const HeroWelcome = () => {
       </TopFlex>
       <BottomFlex>
         <WelcomeLeftAlt>
-          <WelcomeDash />
-          <DashText>hello there</DashText>
+          <SectionDash text="hello there" />
         </WelcomeLeftAlt>
         <ScheduleCall>
           <ScheduleCallButton>Schedule a Call</ScheduleCallButton>
@@ -64,18 +63,6 @@ const TopFlex = styled.div`
   }
 `;
 
-const WelcomeDash = styled(Dash)`
-  margin-left: 0;
-  margin-right: 5px;
-  width: 57px;
-  background-color: ${({ theme }) => theme.colors.secondary};
-`;
-
-const DashText = styled.span`
-  font-size: 14px;
-  font-weight: 500;
-`;
-
 const BottomFlex = styled.div`
   display: flex;
   align-items: center;
@@ -98,8 +85,6 @@ const WelcomeLeft = styled.div`
 const WelcomeLeftAlt = styled.div`
   width: 50%;
   padding: 0 3.5rem;
-  display: flex;
-  align-items: center;
 
   ${({ theme }) => theme.media.lg} {
     margin-top: 4rem;

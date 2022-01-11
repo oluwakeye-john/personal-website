@@ -1,31 +1,15 @@
 import styled, { css } from "styled-components";
+import { Container1 } from "../container";
 
 export const NavbarContainer = styled.div`
   z-index: 5;
-  padding: 3rem 11.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 14px;
 
-  ${({ theme }) => theme.media.xxl} {
-    padding: 3rem 8rem;
-  }
-
-  ${({ theme }) => theme.media.xl} {
-    padding: 3rem 7rem;
-  }
-
-  ${({ theme }) => theme.media.lg} {
-    padding: 1.5rem 4rem;
-    flex-direction: column;
-  }
-
-  ${({ theme }) => theme.media.sm} {
-    padding: 1.5rem 1.5rem;
-    flex-direction: column;
-  }
+  ${Container1}
 `;
 
 const HideOnMobile = css`

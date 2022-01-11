@@ -3,6 +3,7 @@ const customMediaQuery = (maxWidth: number) =>
 
 interface Media {
   custom: (maxNumber: number) => string;
+  xs: string;
   sm: string;
   md: string;
   lg: string;
@@ -12,6 +13,7 @@ interface Media {
 
 const media: Media = {
   custom: customMediaQuery,
+  xs: customMediaQuery(330),
   sm: customMediaQuery(592),
   md: customMediaQuery(768),
   lg: customMediaQuery(992),

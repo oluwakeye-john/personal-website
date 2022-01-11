@@ -42,7 +42,7 @@ export const Fonts = css`
   @font-face {
     font-family: NeueHaasGroteskDisplayPro;
     src: url("/fonts/NeueHaasGroteskDisplayPro/NeueHaasDisplayLight.ttf");
-    font-weight: 300;
+    font-weight: 200;
   }
   @font-face {
     font-family: NeueHaasGroteskDisplayPro;
@@ -57,6 +57,6 @@ export const Fonts = css`
   @font-face {
     font-family: NeueHaasGroteskDisplayPro;
     src: url("/fonts/NeueHaasGroteskDisplayPro/NeueHaasDisplayThin.ttf");
-    font-weight: 200;
+    font-weight: 300;
   }
 `;
