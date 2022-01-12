@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { useRef } from "react";
 import styled from "styled-components";
-import svgs from "../../assets/svgs/svg";
+import works from "../../data/works";
+import { horizontalScroll } from "../scroll";
 import WorksItem from "./item";
 
 const WorksSlide = () => {
@@ -22,12 +22,9 @@ const WorksSlide = () => {
   return (
     <Wrapper>
       <WorksSlideContainer ref={slider}>
-        <WorksItem />
-        <WorksItem />
-        <WorksItem />
-        <WorksItem />
-        <WorksItem />
-        <WorksItem />
+        {works.map((wk, index) => (
+          <WorksItem key={index} work={wk} />
+        ))}
 
         {/* <LeftControl onClick={handleBackward}>
           <Image width={53} height={122} alt="left" src={svgs.union} />
@@ -52,9 +49,7 @@ const Wrapper = styled.div`
 `;
 
 const WorksSlideContainer = styled.div`
-  white-space: nowrap;
-  overflow: auto;
-  scroll-behavior: smooth;
+  ${horizontalScroll}
 `;
 
 const LeftControl = styled.div`

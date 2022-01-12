@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Container1, Container5 } from "../container";
+import { Container5 } from "../container";
 import Quote from "../quote";
+import { SectionHeading } from "../text";
 
 const WorksHeading = () => {
   return (
@@ -36,20 +37,8 @@ const WorksTitleContainer = styled.div`
 `;
 
 const WorksText = styled.h3`
-  color: #fff;
-  font-weight: 300;
-  font-size: 80px;
-  line-height: 96.5%;
-  margin: 0;
-
-  margin-bottom: 0rem;
+  ${SectionHeading};
   padding-right: 2.1rem;
-
-  ${({ theme }) => theme.media.md} {
-    margin-bottom: 0;
-    font-size: 60px;
-    line-height: 96.5%;
-  }
 `;
 
 const WorksTitleContent = styled.div`

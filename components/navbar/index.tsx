@@ -44,7 +44,7 @@ const Navbar = () => {
         <NavbarLeftItem>Download Resume</NavbarLeftItem>
       </NavbarLeft>
       <NavbarCenter>
-        <NavbarCenterItem dark={mobileNav}>johhn.eth</NavbarCenterItem>
+        <NavbarCenterItem dark={mobileNav}>john.oluwakeye</NavbarCenterItem>
         <NavbarToggle onClick={toggleMobileNav}>
           <Menu />
         </NavbarToggle>

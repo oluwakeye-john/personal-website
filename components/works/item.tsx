@@ -1,14 +1,15 @@
 import Image from "next/image";
 import styled from "styled-components";
 import images from "../../assets/images/images";
+import { Work } from "../../data/works";
 
-const WorksItem = () => {
+const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
-        <Image alt="Work 1" layout="fill" src={images.work1} />
+        <Image alt="Work 1" layout="fill" src={work.image} />
         <LaunchButtonContainer className="ls">
-          <LaunchButton>
+          <LaunchButton href={work.liveUrl} target="_blank">
             <span>
               launch
               <br />
@@ -17,7 +18,7 @@ const WorksItem = () => {
           </LaunchButton>
         </LaunchButtonContainer>
       </WorksItemContent>
-      <WorksItemCaption>classic online socials</WorksItemCaption>
+      <WorksItemCaption>{work.title}</WorksItemCaption>
     </WorksItemContainer>
   );
 };
@@ -48,7 +49,8 @@ const WorksItemContent = styled.div`
   padding: 2rem;
 
   img {
-    transition: 0.3s;
+    object-fit: cover;
+    transition: 1s ease-in-out;
   }
 
   &:hover {
@@ -57,6 +59,7 @@ const WorksItemContent = styled.div`
       opacity: 1;
     }
     img {
+      opacity: 0.5;
       transform: scale(1.2);
     }
   }
@@ -87,7 +90,7 @@ const LaunchButtonContainer = styled.div`
   cursor: pointer;
 `;
 
-const LaunchButton = styled.div`
+const LaunchButton = styled.a`
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.32);
 
@@ -104,4 +107,6 @@ const LaunchButton = styled.div`
   font-size: 20px;
   line-height: 94.5%;
   color: #fff;
+
+  text-decoration: none;
 `;

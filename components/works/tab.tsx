@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container1 } from "../container";
+import { horizontalScroll } from "../scroll";
 
 const WorksTab = () => {
   return (
@@ -15,8 +16,7 @@ const WorksTab = () => {
 const TabContainer = styled.div`
   ${Container1};
 
-  white-space: nowrap;
-  overflow-x: auto;
+  ${horizontalScroll};
 
   display: flex;
 

@@ -21,7 +21,7 @@ export const Dash = styled.div`
   margin-left: 10px;
 `;
 
-const YellowDash = styled(Dash)<{ right?: boolean }>`
+export const YellowDash = styled(Dash)<{ right?: boolean }>`
   margin-left: ${({ right }) => (right ? "5px" : 0)};
   margin-right: ${({ right }) => (right ? 0 : "5px")};
   width: 57px;
@@ -30,7 +30,7 @@ const YellowDash = styled(Dash)<{ right?: boolean }>`
 `;
 
 const DashText = styled.span`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   order: 2;
 `;

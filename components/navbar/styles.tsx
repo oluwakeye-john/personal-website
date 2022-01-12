@@ -9,7 +9,7 @@ export const NavbarContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 14px;
 
-  ${Container1}
+  ${Container1};
 `;
 
 const HideOnMobile = css`

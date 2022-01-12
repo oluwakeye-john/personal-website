@@ -1,3 +1,9 @@
-import styled from "styled-components";
+import { css } from "styled-components";
 
-export const CustomButton = styled.button``;
+export const stripeButton = css`
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-weight: inherit;
+  /* outline: none; */
+`;
