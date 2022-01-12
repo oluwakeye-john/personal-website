@@ -1,29 +1,37 @@
 import { useState } from "react";
 import styled from "styled-components";
+import experiences from "../../data/experience";
 import { stripeButton } from "../button";
 import { Container2, Container3 } from "../container";
 import { YellowDash } from "../dash";
 import { horizontalScroll } from "../scroll";
 import { SectionHeading } from "../text";
+import Courses from "./courses";
 import Experience from "./experience";
 
 const items = [
   {
     name: "Work Experience",
+    component: Experience,
   },
   {
     name: "Courses",
+    component: Courses,
   },
   {
     name: "Awards",
+    component: Experience,
   },
   {
     name: "Interests",
+    component: Experience,
   },
 ];
 
 const More = () => {
   const [currentIndex, setCurentIndex] = useState(0);
+
+  const Component = items[currentIndex].component;
 
   return (
     <MoreContainer>
@@ -48,7 +56,7 @@ const More = () => {
           ))}
         </MoreMenu>
         <MoreDetails>
-          <Experience />
+          <Component />
         </MoreDetails>
       </MoreContent>
     </MoreContainer>

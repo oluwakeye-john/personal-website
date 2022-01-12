@@ -73,7 +73,7 @@ const Sp = styled.div`
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
-  color: #4ce2b2;
+  color: ${({ theme }) => theme.colors.primary};
 
   letter-spacing: 0.205em;
   text-transform: uppercase;

@@ -13,7 +13,7 @@ const experiences: Experience[] = [
     endDate: "Present",
     company: "Helicarrier",
     description:
-      "The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info. The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info.",
+      "I’ve undertaken more senior responsibilities in addition to my previous role. While advocating for the brand within the company, I help make sure the work we produce adheres to our brand standards by providing guidance and mentorship to other members of the team. I am accountable for my projects as a design lead for their entire lifecycle from conception to completion, and responsible in presenting each stage to stakeholders and the team with rationale for my design decisions. ",
     location: "Lagos, Nigeria",
     position: "Frontend Engineer",
   },
@@ -22,7 +22,7 @@ const experiences: Experience[] = [
     endDate: "May 2021",
     company: "Credmi",
     description:
-      "The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info. The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info.",
+      "I’ve undertaken more senior responsibilities in addition to my previous role. While advocating for the brand within the company, I help make sure the work we produce adheres to our brand standards by providing guidance and mentorship to other members of the team. I am accountable for my projects as a design lead for their entire lifecycle from conception to completion, and responsible in presenting each stage to stakeholders and the team with rationale for my design decisions. ",
     location: "Lagos, Nigeria",
     position: "Software Developer",
   },
@@ -31,7 +31,7 @@ const experiences: Experience[] = [
     endDate: "March 2021",
     company: "F&K Savings",
     description:
-      "The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info. The Flutterwave API only returns the bank name and account number. I have no idea how dollar payments can be made with just that info.",
+      "I’ve undertaken more senior responsibilities in addition to my previous role. While advocating for the brand within the company, I help make sure the work we produce adheres to our brand standards by providing guidance and mentorship to other members of the team. I am accountable for my projects as a design lead for their entire lifecycle from conception to completion, and responsible in presenting each stage to stakeholders and the team with rationale for my design decisions. ",
     location: "Ibadan, Nigeria",
     position: "Frontend Engineer",
   },
