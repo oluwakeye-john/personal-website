@@ -37,13 +37,19 @@ const ExperienceItemContainer = styled.div`
 
   display: flex;
   position: relative;
+
+  & > div {
+    padding-bottom: 3rem;
+  }
+
+  &:last-child > div {
+    padding-bottom: 0;
+  }
 `;
 
 const Content = styled.div`
   width: 100%;
   padding-left: 2rem;
-
-  padding-bottom: 3rem;
 
   ${({ theme }) => theme.media.lg} {
     padding-left: 1.5rem;

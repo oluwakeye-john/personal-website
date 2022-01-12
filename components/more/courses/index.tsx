@@ -13,13 +13,12 @@ const Courses = () => {
 };
 
 const CoursesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 1.7rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
 
   ${({ theme }) => theme.media.md} {
-    padding-top: 2rem;
+    grid-template-columns: auto;
   }
 `;
 

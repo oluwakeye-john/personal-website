@@ -1,13 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
-import experiences from "../../data/experience";
 import { stripeButton } from "../button";
 import { Container2, Container3 } from "../container";
 import { YellowDash } from "../dash";
 import { horizontalScroll } from "../scroll";
 import { SectionHeading } from "../text";
+import Awards from "./awards";
 import Courses from "./courses";
 import Experience from "./experience";
+import Interests from "./interests";
 
 const items = [
   {
@@ -20,11 +21,11 @@ const items = [
   },
   {
     name: "Awards",
-    component: Experience,
+    component: Awards,
   },
   {
     name: "Interests",
-    component: Experience,
+    component: Interests,
   },
 ];
 
