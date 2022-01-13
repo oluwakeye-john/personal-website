@@ -108,6 +108,7 @@ const Content = styled.div`
 
   ${({ theme }) => theme.media.md} {
     max-width: 100%;
+    padding: 1rem 0;
   }
 `;
 

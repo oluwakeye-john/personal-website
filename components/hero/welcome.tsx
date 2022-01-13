@@ -57,8 +57,8 @@ const TopFlex = styled.div`
   display: flex;
   align-items: center;
 
-  ${({ theme }) => theme.media.sm} {
-    /* display: none; */
+  ${({ theme }) => theme.media.lg} {
+    display: none;
   }
 `;
 
@@ -86,33 +86,10 @@ const WelcomeLeftAlt = styled.div`
   padding: 0 3.5rem;
 
   ${({ theme }) => theme.media.lg} {
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 100%;
     padding: 0;
   }
-`;
-
-const WelcomeRight = styled.div`
-  margin-left: 1rem;
-  width: 31%;
-
-  ${({ theme }) => theme.media.lg} {
-    margin-left: 0;
-    width: 100%;
-  }
-`;
-
-const WelcomeText = styled.div`
-  padding: 3px;
-  padding-left: 0.8rem;
-  padding-bottom: 8px;
-
-  border-left: 3px solid ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.lightText};
-
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 140.5%;
 `;
 
 const ScheduleCall = styled.div`
@@ -123,7 +100,7 @@ const ScheduleCall = styled.div`
 
   ${({ theme }) => theme.media.lg} {
     margin-left: 0;
-    /* display: none; */
+    display: none;
   }
 `;
 

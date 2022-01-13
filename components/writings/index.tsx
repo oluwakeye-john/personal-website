@@ -8,7 +8,7 @@ const RecentWritings = () => {
   return (
     <WritingsContainer>
       <CustomHeading
-        title="My Recent Works"
+        title="My Recent Writings"
         description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
       />
       <WritingsContent>
@@ -24,6 +24,7 @@ export default RecentWritings;
 
 const WritingsContainer = styled.div`
   background: #f9f9f9;
+  padding-bottom: 3rem;
 `;
 
 const WritingsContent = styled.div`

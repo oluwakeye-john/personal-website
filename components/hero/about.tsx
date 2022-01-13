@@ -27,7 +27,7 @@ const HeroAbout = () => {
                 <AboutSection1Tag>Software Developer</AboutSection1Tag>
               </AboutSection1Content>
               <AboutImage>
-                <img alt="Me" src="/me6.png" />
+                <img alt="Me" src="/me.png" />
               </AboutImage>
             </AboutSection1>
             <AboutSection2>
@@ -52,7 +52,7 @@ const HeroAbout = () => {
 const AboutWrapper = styled.div`
   ${Container2}
 
-  ${({ theme }) => theme.media.lg} {
+  ${({ theme }) => theme.media.md} {
     padding: 0;
   }
 `;
@@ -71,9 +71,13 @@ const HeroTitle = styled.h2`
   line-height: 94.5%;
 
   ${({ theme }) => theme.media.lg} {
-    padding: 0 1.2rem;
+    padding: 0;
     font-size: 80px;
     line-height: 94.5%;
+  }
+
+  ${({ theme }) => theme.media.md} {
+    padding: 0 1.2rem;
   }
 
   ${({ theme }) => theme.media.xs} {
@@ -95,10 +99,9 @@ const AboutContent = styled.div`
   height: 341px;
   display: flex;
 
-  ${({ theme }) => theme.media.lg} {
+  ${({ theme }) => theme.media.md} {
     flex-direction: column;
     height: auto;
-    /* height: 300px; */
   }
 `;
 
@@ -111,7 +114,7 @@ const AboutSection1 = styled.div`
   display: flex;
   justify-content: space-between;
 
-  ${({ theme }) => theme.media.lg} {
+  ${({ theme }) => theme.media.md} {
     width: auto;
     padding: 0 2rem;
     padding-top: 1rem;
@@ -148,7 +151,7 @@ const AboutSection2 = styled.div`
   padding: 5rem 3.5rem;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
 
-  ${({ theme }) => theme.media.lg} {
+  ${({ theme }) => theme.media.md} {
     width: auto;
     padding: 4rem 2rem;
     margin-right: 1.5rem;

@@ -27,6 +27,10 @@ export const Container2 = css`
   padding: 0.5rem 6.2rem;
 
   ${({ theme }) => theme.media.lg} {
+    padding: 0 4rem;
+  }
+
+  ${({ theme }) => theme.media.md} {
     padding: 0 1.5rem;
   }
 `;
@@ -56,10 +60,10 @@ export const Container5 = css`
   }
 
   ${({ theme }) => theme.media.lg} {
-    padding: 0 9rem;
+    padding: 0 4rem;
   }
 
   ${({ theme }) => theme.media.md} {
-    padding: 0 2.5rem;
+    padding: 0 1.5rem;
   }
 `;
