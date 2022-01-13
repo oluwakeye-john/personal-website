@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import WorksHeading from "./heading";
+import CustomHeading from "../heading";
 import WorksSlide from "./slide";
 import WorksTab from "./tab";
 
 const Works = () => {
   return (
     <WorksContainer>
-      <WorksHeading />
+      <CustomHeading
+        dark
+        title="My Recent Works"
+        description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
+      />
       <WorksTab />
       <WorksSlide />
     </WorksContainer>
