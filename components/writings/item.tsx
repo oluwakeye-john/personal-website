@@ -3,6 +3,7 @@
 
 import styled from "styled-components";
 import { Writing } from "../../data/writings";
+import { optimizeExternalImage } from "../../utils/image";
 
 interface IWritingItem {
   writing: Writing;
@@ -13,9 +14,9 @@ const WritingItem = ({ writing }: IWritingItem) => {
     <Wrapper>
       <Container>
         <a href={writing.url} rel="noreferrer" target="_blank">
-          <img alt="Omoo" src={writing.image} />
+          <img alt="Omoo" src={optimizeExternalImage(writing.image)} />
         </a>
-        <Content>
+        <Content className="writing-content">
           <Title href={writing.url} rel="noreferrer" target="_blank">
             {writing.title}
           </Title>
@@ -42,6 +43,10 @@ const Wrapper = styled.div`
     grid-column-end: unset;
     grid-row-start: unset;
     grid-row-end: unset;
+  }
+
+  .writing-content {
+    max-width: 70%;
   }
 
   img {
@@ -71,6 +76,10 @@ const Wrapper = styled.div`
       width: 100%;
       height: 450px;
     }
+
+    .writing-content {
+      max-width: 90%;
+    }
   }
 
   &:nth-child(3) {
@@ -88,11 +97,15 @@ const Wrapper = styled.div`
 
     img {
       width: 100%;
-      height: 290px;
+      height: 250px;
 
       ${({ theme }) => theme.media.md} {
         height: 450px;
       }
+    }
+
+    .writing-content {
+      max-width: 90%;
     }
   }
 `;
@@ -100,11 +113,14 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  img {
+    object-fit: cover;
+  }
 `;
 
 const Content = styled.div`
   padding: 1rem 2rem;
-  max-width: 70%;
 
   ${({ theme }) => theme.media.md} {
     max-width: 100%;

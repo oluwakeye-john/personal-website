@@ -59,4 +59,30 @@ export const Fonts = css`
     src: url("/fonts/NeueHaasGroteskDisplayPro/NeueHaasDisplayThin.ttf");
     font-weight: 300;
   }
+
+  // SFProText
+
+  @font-face {
+    font-family: SFProText;
+    src: url("/fonts/SFProText/SFProText-Light.ttf");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: SFProText;
+    src: url("/fonts/SFProText/SFProText-Regular.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: SFProText;
+    src: url("/fonts/SFProText/SFProText-Medium.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: SFProText;
+    src: url("/fonts/SFProText/SFProText-Bold.ttf");
+    font-weight: 700;
+  }
 `;

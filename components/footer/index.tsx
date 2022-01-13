@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import social from "../../data/social";
 import { Container2 } from "../container";
 import Dribbble from "../icons/dribbble";
 import Facebook from "../icons/facebook";
@@ -13,7 +14,13 @@ const Footer = () => {
       <Content>
         <Left>
           <FooterTitle>Ready?</FooterTitle>
-          <FooterTitleUnderline>Schedule a Call</FooterTitleUnderline>
+          <FooterTitleUnderline
+            as="a"
+            target="_blank"
+            href={`mailto:${social.email}`}
+          >
+            Schedule a Call
+          </FooterTitleUnderline>
         </Left>
         <Right>
           <FooterItem>
@@ -23,7 +30,7 @@ const Footer = () => {
             <Icon>
               <Mail />
             </Icon>
-            <span>ogunladeoluwasayo@gmail.com</span>
+            <span>{social.email}</span>
           </FooterItem>
           <FooterItem>
             <Icon>

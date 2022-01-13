@@ -38,6 +38,7 @@ const fontSizes = {
 
 const fontFamilies = {
   normal: "NeueHaasGroteskDisplayPro, sans-serif",
+  alt: "SFProText, sans-serif",
   heading: "CircularStd, sans-serif",
 };
 
