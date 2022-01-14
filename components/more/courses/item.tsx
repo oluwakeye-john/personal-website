@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import { Course } from "../../../data/course";
 import { CoursesPattern1, CoursesPattern2 } from "./icons";
@@ -11,7 +12,7 @@ const CourseItem = ({ course }: ICourseItem) => {
     <CourseContainer color={course.bgColor}>
       <Content>
         <Issuer>
-          <span>{course.issuer}</span>
+          <img alt={course.issuer} src={course.logo} />
         </Issuer>
         <div>
           <CourseName>{course.courseName}</CourseName>
@@ -59,6 +60,10 @@ const Content = styled.div`
 
 const Issuer = styled.div`
   font-weight: 500;
+
+  img {
+    height: 30px;
+  }
 `;
 
 const CourseName = styled.span`

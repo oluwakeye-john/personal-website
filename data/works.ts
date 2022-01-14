@@ -20,7 +20,6 @@ const works: Work[] = [
     title: "Wallet Alert",
     liveUrl: "http://wallet-alert.herokuapp.com",
   },
-
   {
     image: "/images/projects/jamz.png",
     title: "Jamz",

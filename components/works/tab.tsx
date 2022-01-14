@@ -6,9 +6,10 @@ const WorksTab = () => {
   return (
     <TabContainer>
       <TabItem>All</TabItem>
-      <TabItem>Web Development</TabItem>
-      <TabItem>App Development</TabItem>
-      <TabItem>Motion</TabItem>
+      <TabItem>Fintech</TabItem>
+      <TabItem>Crypto</TabItem>
+      <TabItem>Entertainment</TabItem>
+      <TabItem>Others</TabItem>
     </TabContainer>
   );
 };

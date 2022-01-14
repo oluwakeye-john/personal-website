@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaFacebookF,
   FaGithub,
@@ -26,19 +27,27 @@ const Footer = () => {
         </Left>
         <Right>
           <FooterItem>
-            <FooterText>john.oluwakeye</FooterText>
+            <Link href="/">
+              <a>
+                <FooterText>john.oluwakeye</FooterText>
+              </a>
+            </Link>
           </FooterItem>
           <FooterItem>
-            <Icon>
-              <Mail />
-            </Icon>
-            <span>{social.email}</span>
+            <a href={`mailto:${social.email}`} target="_blank" rel="noreferrer">
+              <Icon>
+                <Mail />
+              </Icon>
+              <span>{social.email}</span>
+            </a>
           </FooterItem>
           <FooterItem>
-            <Icon>
-              <Phone />
-            </Icon>
-            <span>{social.phone}</span>
+            <a href={`tel:${social.phone}`} target="_blank" rel="noreferrer">
+              <Icon>
+                <Phone />
+              </Icon>
+              <span>{social.phone}</span>
+            </a>
           </FooterItem>
           <SocialItem>
             <FaLinkedinIn />
@@ -127,8 +136,6 @@ const FooterItem = styled.div`
   line-height: 24px;
   color: rgba(255, 255, 255, 0.71);
 
-  display: flex;
-  align-items: center;
   margin-bottom: 2rem;
 
   cursor: pointer;
@@ -136,6 +143,11 @@ const FooterItem = styled.div`
 
   &:hover {
     color: ${({ theme }) => theme.colors.lightPrimary};
+  }
+
+  a {
+    display: flex;
+    align-items: center;
   }
 
   svg {

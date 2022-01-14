@@ -1,10 +1,6 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Instagram from "../icons/instagram";
 import Menu from "../icons/menu";
 import MobileMenu from "./mobile-menu";
@@ -47,7 +43,11 @@ const Navbar = () => {
         <NavbarLeftItem>Download Resume</NavbarLeftItem>
       </NavbarLeft>
       <NavbarCenter>
-        <NavbarCenterItem dark={mobileNav}>john.oluwakeye</NavbarCenterItem>
+        <NavbarCenterItem dark={mobileNav}>
+          <Link href="/">
+            <a>john.oluwakeye</a>
+          </Link>
+        </NavbarCenterItem>
         <NavbarToggle onClick={toggleMobileNav}>
           <Menu />
         </NavbarToggle>
