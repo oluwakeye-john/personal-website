@@ -1,14 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import styled from "styled-components";
 import { Work } from "../../data/works";
+import { cloudinaryImage } from "../../utils/image";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
-        <img className="img1" alt={work.title} src={work.image} />
-        {/* <img className="img2" alt="Work 1" src={work.image} /> */}
+        <img alt={work.title} src={cloudinaryImage(work.image)} />
         <LaunchButtonContainer className="ls">
           <LaunchButton href={work.liveUrl} target="_blank">
             <span>
@@ -56,15 +55,6 @@ const WorksItemContent = styled.div`
     object-fit: cover;
     object-position: top;
     transition: 1s ease-in-out;
-  }
-
-  .img2 {
-    transform: rotate(-30deg) scale(1.02);
-    position: absolute !important ;
-
-    z-index: 2;
-    top: 50px;
-    left: 100px;
   }
 
   &:hover {

@@ -3,7 +3,6 @@
 
 import styled from "styled-components";
 import { Writing } from "../../data/writings";
-import { optimizeExternalImage } from "../../utils/image";
 
 interface IWritingItem {
   writing: Writing;
@@ -15,7 +14,7 @@ const WritingItem = ({ writing }: IWritingItem) => {
       <Container>
         <a href={writing.url} rel="noreferrer" target="_blank">
           <div className="img-container">
-            <img alt="Omoo" src={optimizeExternalImage(writing.image)} />
+            <img alt="Omoo" src={writing.image} />
           </div>
         </a>
         <Content className="writing-content">

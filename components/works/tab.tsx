@@ -1,24 +1,29 @@
 import styled from "styled-components";
+import works from "../../data/works";
 import { Container1 } from "../container";
 import { horizontalScroll } from "../scroll";
 
 const WorksTab = () => {
+  const array: string[] = [];
+
+  works.map((wk) => {
+    array.push(...wk.categories);
+  });
+
+  const tabs = ["All", ...Array.from(new Set(array))];
+
   return (
     <TabContainer>
-      <TabItem>All</TabItem>
-      <TabItem>Fintech</TabItem>
-      <TabItem>Crypto</TabItem>
-      <TabItem>Entertainment</TabItem>
-      <TabItem>Others</TabItem>
+      {tabs.map((tab, index) => (
+        <TabItem key={index}>{tab}</TabItem>
+      ))}
     </TabContainer>
   );
 };
 
 const TabContainer = styled.div`
   ${Container1};
-
   ${horizontalScroll};
-
   display: flex;
 
   ${({ theme }) => theme.media.lg} {

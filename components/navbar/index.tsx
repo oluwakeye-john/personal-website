@@ -40,7 +40,15 @@ const Navbar = () => {
     <NavbarContainer>
       <NavbarLeft>
         <NavbarLeftItem>My Works</NavbarLeftItem>
-        <NavbarLeftItem>Download Resume</NavbarLeftItem>
+        <NavbarLeftItem>
+          <a
+            href="https://drive.google.com/file/d/1FBJa0LeD8vFW1eVcYCEHMNAoFr-VjXGh/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download Resume
+          </a>
+        </NavbarLeftItem>
       </NavbarLeft>
       <NavbarCenter>
         <NavbarCenterItem dark={mobileNav}>

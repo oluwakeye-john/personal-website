@@ -7,7 +7,7 @@ export interface Interest {
 const interests: Interest[] = [
   {
     key: "React",
-    value: "here and there",
+    value: "Facebook",
   },
   {
     key: "VueJS",
