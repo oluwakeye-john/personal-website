@@ -153,6 +153,7 @@ const FooterItem = styled.div`
   svg {
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 
     cursor: pointer;
 
@@ -171,13 +172,14 @@ const SocialItem = styled.div`
   align-items: center;
   margin-bottom: 2rem;
 
-  cursor: pointer;
-
   svg {
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 
     margin-right: 2rem;
+
+    cursor: pointer;
 
     transition: 0.3s ease-in-out;
     &:hover {

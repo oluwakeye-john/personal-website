@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import social from "../../data/social";
 import Instagram from "../icons/instagram";
 import Menu from "../icons/menu";
 import MobileMenu from "./mobile-menu";
@@ -39,13 +40,13 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <NavbarLeft>
-        <NavbarLeftItem>My Works</NavbarLeftItem>
         <NavbarLeftItem>
-          <a
-            href="https://drive.google.com/file/d/1FBJa0LeD8vFW1eVcYCEHMNAoFr-VjXGh/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href="/#works">
+            <a>My Works</a>
+          </Link>
+        </NavbarLeftItem>
+        <NavbarLeftItem>
+          <a href={social.resume} target="_blank" rel="noreferrer">
             Download Resume
           </a>
         </NavbarLeftItem>

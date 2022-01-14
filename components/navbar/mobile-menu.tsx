@@ -1,10 +1,7 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
-import Dribbble from "../icons/dribbble";
-import Facebook from "../icons/facebook";
 import Instagram from "../icons/instagram";
-import LinkedIn from "../icons/linkedin";
 
 interface IMobileMenu {
   open: boolean;
@@ -14,7 +11,11 @@ const MobileMenu = ({ open }: IMobileMenu) => {
   return (
     <MobileMenuContainer open={open}>
       <MobileMenuItem>My Works</MobileMenuItem>
-      <MobileMenuItem>Download Resume</MobileMenuItem>
+      <MobileMenuItem>
+        <a href={social.resume} target="_blank" rel="noreferrer">
+          Download Resume
+        </a>
+      </MobileMenuItem>
       <MobileMenuItem>
         <a href={`mailto:${social.email}`} target="_blank" rel="noreferrer">
           Schedule a Call

@@ -5,7 +5,7 @@ import WorksTab from "./tab";
 
 const Works = () => {
   return (
-    <WorksContainer>
+    <WorksContainer id="works">
       <CustomHeading
         dark
         title="My Recent Projects"

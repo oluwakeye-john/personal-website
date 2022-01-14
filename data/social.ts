@@ -6,6 +6,7 @@ export interface Social {
   facebook: string;
   linkedIn: string;
   phone: string;
+  resume: string;
 }
 
 const social: Social = {
@@ -16,6 +17,8 @@ const social: Social = {
   twitter: "https://twitter.com/oluwakeyejohn",
   linkedIn: "https://www.linkedin.com/in/oluwakeye-john-1706/",
   phone: "+234 705 364 3618",
+  resume:
+    "https://drive.google.com/file/d/1FBJa0LeD8vFW1eVcYCEHMNAoFr-VjXGh/view?usp=sharing",
 };
 
 export default social;
