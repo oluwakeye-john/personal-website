@@ -20,12 +20,12 @@ const items = [
     component: Courses,
   },
   {
-    name: "Awards",
-    component: Awards,
+    name: "Skills",
+    component: Interests,
   },
   {
-    name: "Interests",
-    component: Interests,
+    name: "Awards",
+    component: Awards,
   },
 ];
 

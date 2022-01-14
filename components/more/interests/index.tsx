@@ -1,20 +1,13 @@
 import styled from "styled-components";
+import interests from "../../../data/interests";
 import InterestItem from "./item";
 
 const Interests = () => {
   return (
     <InterestsContainer>
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
-      <InterestItem />
+      {interests.map((interest, index) => (
+        <InterestItem interest={interest} key={index} />
+      ))}
     </InterestsContainer>
   );
 };

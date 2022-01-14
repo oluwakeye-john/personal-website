@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import Dribbble from "../icons/dribbble";
-import Facebook from "../icons/facebook";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import Instagram from "../icons/instagram";
-import LinkedIn from "../icons/linkedin";
 import Menu from "../icons/menu";
 import MobileMenu from "./mobile-menu";
 import {
@@ -51,16 +54,16 @@ const Navbar = () => {
       </NavbarCenter>
       <NavbarRight>
         <NavbarRightItem>
-          <LinkedIn />
+          <FaLinkedinIn />
         </NavbarRightItem>
         <NavbarRightItem>
-          <Facebook />
+          <FaFacebookF />
         </NavbarRightItem>
         <NavbarRightItem>
           <Instagram />
         </NavbarRightItem>
         <NavbarRightItem>
-          <Dribbble />
+          <FaGithub />
         </NavbarRightItem>
       </NavbarRight>
 

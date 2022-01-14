@@ -1,3 +1,4 @@
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
 import Dribbble from "../icons/dribbble";
@@ -22,16 +23,16 @@ const MobileMenu = ({ open }: IMobileMenu) => {
 
       <MobileMenuIconContainer>
         <MobileMenuIcon>
-          <LinkedIn />
+          <FaLinkedinIn />
         </MobileMenuIcon>
         <MobileMenuIcon>
-          <Facebook />
+          <FaFacebookF />
         </MobileMenuIcon>
         <MobileMenuIcon>
           <Instagram />
         </MobileMenuIcon>
         <MobileMenuIcon>
-          <Dribbble />
+          <FaGithub />
         </MobileMenuIcon>
       </MobileMenuIconContainer>
     </MobileMenuContainer>
@@ -91,6 +92,9 @@ export const MobileMenuIcon = styled.div`
   svg {
     width: 15px;
     height: 15px;
-    stroke: #fff;
+  }
+
+  path {
+    fill: #fff;
   }
 `;

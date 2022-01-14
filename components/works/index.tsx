@@ -8,7 +8,7 @@ const Works = () => {
     <WorksContainer>
       <CustomHeading
         dark
-        title="My Recent Works"
+        title="My Recent Projects"
         description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
       />
       <WorksTab />

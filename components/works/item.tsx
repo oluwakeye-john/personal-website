@@ -1,13 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import styled from "styled-components";
-import images from "../../assets/images/images";
 import { Work } from "../../data/works";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
-        <Image alt="Work 1" layout="fill" src={work.image} />
+        <img className="img1" alt={work.title} src={work.image} />
+        {/* <img className="img2" alt="Work 1" src={work.image} /> */}
         <LaunchButtonContainer className="ls">
           <LaunchButton href={work.liveUrl} target="_blank">
             <span>
@@ -39,6 +40,7 @@ const WorksItemContainer = styled.div`
 const WorksItemContent = styled.div`
   width: 350px;
   height: 456px;
+  background-color: rgba(255, 255, 255, 0.1);
 
   ${({ theme }) => theme.media.md} {
     width: 304px;
@@ -46,11 +48,23 @@ const WorksItemContent = styled.div`
   }
 
   position: relative;
-  padding: 2rem;
+  overflow: hidden;
 
   img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: 1s ease-in-out;
+  }
+
+  .img2 {
+    transform: rotate(-30deg) scale(1.02);
+    position: absolute !important ;
+
+    z-index: 2;
+    top: 50px;
+    left: 100px;
   }
 
   &:hover {
@@ -70,8 +84,10 @@ const WorksItemCaption = styled.p`
   text-align: center;
 
   font-size: 16px;
-  line-height: 26px;
-  font-weight: 300;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.71);
+
+  margin: 2rem 0;
 `;
 
 const LaunchButtonContainer = styled.div`

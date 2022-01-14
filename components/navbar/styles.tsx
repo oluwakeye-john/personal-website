@@ -73,6 +73,11 @@ export const NavbarRightItem = styled.div`
   margin-left: 2.5rem;
   cursor: pointer;
 
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
   path {
     transition: 0.3s ease-in-out;
   }

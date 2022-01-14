@@ -1,10 +1,12 @@
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
 import { Container2 } from "../container";
-import Dribbble from "../icons/dribbble";
-import Facebook from "../icons/facebook";
-import Instagram from "../icons/instagram";
-import LinkedIn from "../icons/linkedin";
 import Mail from "../icons/mail";
 import Phone from "../icons/phone";
 
@@ -39,10 +41,10 @@ const Footer = () => {
             <span>{social.phone}</span>
           </FooterItem>
           <SocialItem>
-            <LinkedIn />
-            <Facebook />
-            <Dribbble />
-            <Instagram />
+            <FaLinkedinIn />
+            <FaFacebookF />
+            <FaGithub />
+            <FaInstagram />
           </SocialItem>
         </Right>
       </Content>
@@ -129,31 +131,50 @@ const FooterItem = styled.div`
   align-items: center;
   margin-bottom: 2rem;
 
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.lightPrimary};
+  }
+
   svg {
     width: 15px;
     height: 15px;
-    font-size: 40px;
 
     cursor: pointer;
 
     path {
-      fill: #fff;
-      transition: 0.3s ease-in-out;
-    }
-    &:hover {
-      path {
-        fill: ${({ theme }) => theme.colors.primary};
-      }
+      fill: currentColor;
     }
   }
 `;
 
-const SocialItem = styled(FooterItem)`
+const SocialItem = styled.div`
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.71);
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+
   svg {
     width: 15px;
     height: 15px;
 
     margin-right: 2rem;
+
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
+  path {
+    fill: currentColor;
   }
 `;
 
