@@ -30,9 +30,10 @@ export const YellowDash = styled(Dash)<{ right?: boolean }>`
 `;
 
 const DashText = styled.span`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   order: 2;
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
 `;
 
 const DashContainer = styled.div<{ right?: boolean }>`

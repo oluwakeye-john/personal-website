@@ -111,4 +111,5 @@ const ScheduleCallButton = styled.div`
   display: inline-block;
   cursor: pointer;
   border-bottom: 0.5px solid #000;
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
 `;

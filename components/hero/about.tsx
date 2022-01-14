@@ -70,6 +70,8 @@ const HeroTitle = styled.h2`
   font-size: 120px;
   line-height: 94.5%;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     padding: 0;
     font-size: 80px;
@@ -179,12 +181,13 @@ const AboutImage = styled.div`
 
 const AboutText = styled.p`
   font-weight: 300;
-  font-size: 14px;
+  font-size: 13px;
   color: ${({ theme }) => theme.colors.lightText};
 `;
 
 const AboutSection1Tag = styled.p`
-  font-size: 11px;
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.lightText};
 `;
 
 export default HeroAbout;

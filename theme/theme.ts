@@ -37,8 +37,8 @@ const fontSizes = {
 };
 
 const fontFamilies = {
-  normal: "NeueHaasGroteskDisplayPro, sans-serif",
-  alt: "SFProText, sans-serif",
+  alt: "NeueHaasGroteskDisplayPro, sans-serif",
+  normal: "SFProText, sans-serif",
   heading: "CircularStd, sans-serif",
 };
 

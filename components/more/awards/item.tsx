@@ -48,6 +48,8 @@ const ItemTitle = styled.span`
   line-height: 111%;
   text-transform: lowercase;
 
+  font-family: ${({ theme }) => theme.fontFamilies.heading};
+
   display: block;
 
   ${({ theme }) => theme.media.md} {

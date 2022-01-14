@@ -72,6 +72,16 @@ export const NavbarCenterItem = styled.h2<{ dark?: boolean }>`
 export const NavbarRightItem = styled.div`
   margin-left: 2.5rem;
   cursor: pointer;
+
+  path {
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    path {
+      fill: ${({ theme }) => theme.colors.primary};
+    }
+  }
 `;
 
 export const NavbarToggle = styled.div`

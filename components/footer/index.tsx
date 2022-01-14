@@ -73,6 +73,8 @@ const FooterTitle = styled.span`
   margin: 0.5rem 0;
   color: #fff;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     font-size: 50px;
     line-height: 100.5%;
@@ -130,8 +132,19 @@ const FooterItem = styled.div`
   svg {
     width: 15px;
     height: 15px;
-    stroke: #fff;
     font-size: 40px;
+
+    cursor: pointer;
+
+    path {
+      fill: #fff;
+      transition: 0.3s ease-in-out;
+    }
+    &:hover {
+      path {
+        fill: ${({ theme }) => theme.colors.primary};
+      }
+    }
   }
 `;
 

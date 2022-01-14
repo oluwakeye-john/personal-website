@@ -70,11 +70,15 @@ const Wrapper = styled.div`
       grid-column-end: unset;
       grid-row-start: unset;
       grid-row-end: unset;
+
+      img {
+        height: 250px;
+      }
     }
 
     img {
       width: 100%;
-      height: 450px;
+      height: 420px;
     }
 
     .writing-content {
@@ -93,15 +97,15 @@ const Wrapper = styled.div`
       grid-column-end: unset;
       grid-row-start: unset;
       grid-row-end: unset;
+
+      img {
+        height: 250px;
+      }
     }
 
     img {
       width: 100%;
       height: 250px;
-
-      ${({ theme }) => theme.media.md} {
-        height: 450px;
-      }
     }
 
     .writing-content {
@@ -145,7 +149,7 @@ const Text = styled.p`
   margin: 0;
 
   font-weight: 300;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 140.5%;
 
   color: ${({ theme }) => theme.colors.lightText};

@@ -32,6 +32,8 @@ const ServicesContainer = styled.div`
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
 `;
 
 const ServicesContent = styled.div`

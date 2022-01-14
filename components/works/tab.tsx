@@ -40,6 +40,8 @@ const TabItem = styled.div`
 
   transition: 0.3s;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     margin-right: 1.5rem;
   }

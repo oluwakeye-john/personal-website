@@ -44,6 +44,8 @@ const ExperienceOverview = styled.div`
   background: rgba(9, 9, 9, 0.01);
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   width: 100%;
+
+  font-family: ${({ theme }) => theme.fontFamilies.heading};
 `;
 
 const OverviewTitle = styled.span`

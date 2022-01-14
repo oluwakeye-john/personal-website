@@ -118,6 +118,8 @@ const MoreMenuItem = styled.div`
   cursor: pointer;
   ${stripeButton};
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     flex-direction: column;
     margin-bottom: 0;

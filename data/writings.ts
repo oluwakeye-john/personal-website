@@ -25,7 +25,7 @@ const writings: Writing[] = [
     image: "https://dev-to-uploads.s3.amazonaws.com/i/6fmr7uuzu3qim31358go.jpg",
     url: "https://dev.to/oluwakeyejohn/my-new-website-tools-and-kits-2ge1",
     description:
-      "After a long time of procastinating, I've finally been able to make time to create my own personal website. This website involves a relatively small tech stack and doesn't cost a dime as it involves no hosting or backend. In this post, I will like to share what the website is built on with you.",
+      "After a long time of procastinating, I've finally been able to make time to create my own personal website. ",
   },
 ];
 

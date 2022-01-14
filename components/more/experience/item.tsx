@@ -32,15 +32,11 @@ export default ExperienceItem;
 
 const ExperienceItemContainer = styled.div`
   font-weight: 300;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 27px;
 
   display: flex;
   position: relative;
-
-  & > div {
-    padding-bottom: 3rem;
-  }
 
   &:last-child > div {
     padding-bottom: 0;
@@ -50,6 +46,8 @@ const ExperienceItemContainer = styled.div`
 const Content = styled.div`
   width: 100%;
   padding-left: 2rem;
+
+  padding-bottom: 2.5rem;
 
   ${({ theme }) => theme.media.lg} {
     padding-left: 1.5rem;

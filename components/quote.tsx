@@ -42,6 +42,6 @@ const QuoteText = styled.div<{ dark?: boolean; extend?: boolean }>`
     dark ? "rgba(255, 255, 255, 0.8)" : theme.colors.lightText};
 
   font-weight: 300;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 140.5%;
 `;

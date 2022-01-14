@@ -108,5 +108,7 @@ const LaunchButton = styled.a`
   line-height: 94.5%;
   color: #fff;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   text-decoration: none;
 `;

@@ -39,6 +39,8 @@ export const MobileMenuContainer = styled.div<{ open: Boolean }>`
   display: none;
   z-index: 4;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     display: block;
     position: fixed;

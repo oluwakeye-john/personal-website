@@ -7,6 +7,8 @@ export const SectionHeading = css`
   line-height: 96.5%;
   margin: 0;
 
+  font-family: ${({ theme }) => theme.fontFamilies.alt};
+
   ${({ theme }) => theme.media.lg} {
     font-size: 60px;
   }

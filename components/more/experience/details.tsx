@@ -35,7 +35,7 @@ const ExperienceDetailsContainer = styled.div<{ active: boolean }>`
   padding-top: 1rem;
 
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 27px;
 
   display: flex;
