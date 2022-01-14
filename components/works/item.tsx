@@ -2,21 +2,14 @@
 import styled from "styled-components";
 import { Work } from "../../data/works";
 import { cloudinaryImage } from "../../utils/image";
+import LaunchButton from "../launch";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
         <img alt={work.title} src={cloudinaryImage(work.image)} />
-        <LaunchButtonContainer className="ls">
-          <LaunchButton href={work.liveUrl} target="_blank">
-            <span>
-              launch
-              <br />
-              app
-            </span>
-          </LaunchButton>
-        </LaunchButtonContainer>
+        <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
       </WorksItemContent>
       <WorksItemCaption>{work.title}</WorksItemCaption>
     </WorksItemContainer>
@@ -78,43 +71,4 @@ const WorksItemCaption = styled.p`
   color: rgba(255, 255, 255, 0.71);
 
   margin: 2rem 0;
-`;
-
-const LaunchButtonContainer = styled.div`
-  position: absolute;
-
-  bottom: 1rem;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-
-  transform: scale(0) translateY(200px);
-  opacity: 0;
-  transition: 0.5s;
-  cursor: pointer;
-`;
-
-const LaunchButton = styled.a`
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.32);
-
-  width: 100px;
-  height: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  font-weight: 300;
-
-  font-size: 20px;
-  line-height: 94.5%;
-  color: #fff;
-
-  font-family: ${({ theme }) => theme.fontFamilies.alt};
-
-  text-decoration: none;
 `;

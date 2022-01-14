@@ -3,19 +3,23 @@ import works from "../../data/works";
 import { Container1 } from "../container";
 import { horizontalScroll } from "../scroll";
 
-const WorksTab = () => {
-  const array: string[] = [];
+interface IWorksTab {
+  currentIndex: number;
+  setCurrentIndex: (n: number) => void;
+  tabs: string[];
+}
 
-  works.map((wk) => {
-    array.push(...wk.categories);
-  });
-
-  const tabs = ["All", ...Array.from(new Set(array))];
-
+const WorksTab = ({ currentIndex, setCurrentIndex, tabs }: IWorksTab) => {
   return (
     <TabContainer>
       {tabs.map((tab, index) => (
-        <TabItem key={index}>{tab}</TabItem>
+        <TabItem
+          onClick={() => setCurrentIndex(index)}
+          active={currentIndex === index}
+          key={index}
+        >
+          {tab}
+        </TabItem>
       ))}
     </TabContainer>
   );
@@ -34,8 +38,9 @@ const TabContainer = styled.div`
   }
 `;
 
-const TabItem = styled.div`
-  color: rgba(255, 255, 255, 0.7);
+const TabItem = styled.div<{ active?: boolean }>`
+  color: ${({ active }) => (active ? "#fff" : "rgba(255, 255, 255, 0.7)")};
+  font-weight: ${({ active }) => (active ? "bold" : "400")};
   margin-right: 3rem;
   text-transform: uppercase;
 
@@ -50,11 +55,6 @@ const TabItem = styled.div`
 
   ${({ theme }) => theme.media.lg} {
     margin-right: 1.5rem;
-  }
-
-  &:hover {
-    color: #fff;
-    font-weight: bold;
   }
 `;
 
