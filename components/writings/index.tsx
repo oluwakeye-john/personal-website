@@ -39,7 +39,7 @@ const WritingsContent = styled.div`
     grid-template-rows: auto;
   }
 
-  column-gap: 2rem;
+  column-gap: 1.3rem;
   row-gap: 2rem;
 
   padding-top: 2rem;

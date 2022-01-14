@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import styled from "styled-components";
+import social from "../../data/social";
 import { SectionDash } from "../dash";
 import Quote from "../quote";
 
@@ -20,7 +21,11 @@ const HeroWelcome = () => {
           <SectionDash text="hello there" />
         </WelcomeLeftAlt>
         <ScheduleCall>
-          <ScheduleCallButton>Schedule a Call</ScheduleCallButton>
+          <ScheduleCallButton>
+            <a target="_blank" rel="noreferrer" href={`mailto:${social.email}`}>
+              Schedule a Call
+            </a>
+          </ScheduleCallButton>
         </ScheduleCall>
       </BottomFlex>
     </WelcomeContainer>

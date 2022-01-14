@@ -14,7 +14,9 @@ const WritingItem = ({ writing }: IWritingItem) => {
     <Wrapper>
       <Container>
         <a href={writing.url} rel="noreferrer" target="_blank">
-          <img alt="Omoo" src={optimizeExternalImage(writing.image)} />
+          <div className="img-container">
+            <img alt="Omoo" src={optimizeExternalImage(writing.image)} />
+          </div>
         </a>
         <Content className="writing-content">
           <Title href={writing.url} rel="noreferrer" target="_blank">
@@ -30,67 +32,66 @@ const WritingItem = ({ writing }: IWritingItem) => {
 export default WritingItem;
 
 const Wrapper = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 5;
-
-  ${({ theme }) => theme.media.md} {
-    grid-template-columns: auto;
-    grid-template-rows: unset;
-
-    grid-column-start: unset;
-    grid-column-end: unset;
-    grid-row-start: unset;
-    grid-row-end: unset;
-  }
-
-  .writing-content {
-    max-width: 70%;
+  .img-container {
+    overflow: hidden;
+    background-color: #000;
   }
 
   img {
-    height: 740px;
     width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+    opacity: 1;
     object-fit: cover;
 
-    ${({ theme }) => theme.media.md} {
-      height: 450px;
+    &:hover {
+      opacity: 0.5;
+      transform: scale(1.2);
     }
   }
 
-  &:nth-child(2) {
-    grid-column-start: 5;
+  &:nth-child(1) {
+    grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 5;
+
+    .img-container {
+      height: 740px;
+    }
+
+    .writing-content {
+      max-width: 70%;
+    }
 
     ${({ theme }) => theme.media.md} {
+      grid-template-columns: auto;
+      grid-template-rows: unset;
+
       grid-column-start: unset;
       grid-column-end: unset;
       grid-row-start: unset;
       grid-row-end: unset;
 
-      img {
+      .img-container {
         height: 250px;
       }
     }
+  }
 
-    img {
-      width: 100%;
-      height: 420px;
+  &:nth-child(2) {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    .img-container {
+      height: 440px;
     }
 
     .writing-content {
       max-width: 90%;
     }
-  }
-
-  &:nth-child(3) {
-    grid-column-start: 5;
-    grid-column-end: 8;
-    grid-row-start: 3;
-    grid-row-end: 5;
 
     ${({ theme }) => theme.media.md} {
       grid-column-start: unset;
@@ -98,18 +99,35 @@ const Wrapper = styled.div`
       grid-row-start: unset;
       grid-row-end: unset;
 
-      img {
+      .img-container {
         height: 250px;
       }
     }
+  }
 
-    img {
-      width: 100%;
+  &:nth-child(3) {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    .img-container {
       height: 250px;
     }
 
     .writing-content {
       max-width: 90%;
+    }
+
+    ${({ theme }) => theme.media.md} {
+      grid-column-start: unset;
+      grid-column-end: unset;
+      grid-row-start: unset;
+      grid-row-end: unset;
+
+      .img-container {
+        height: 250px;
+      }
     }
   }
 `;

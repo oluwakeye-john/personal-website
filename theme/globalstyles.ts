@@ -18,4 +18,9 @@ export const GlobalStyles = createGlobalStyle`
         font-size: ${({ theme }) => theme.fontSizes.m};
         line-height: 140.5%;
     }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 `;

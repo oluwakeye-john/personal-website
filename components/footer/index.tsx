@@ -36,7 +36,7 @@ const Footer = () => {
             <Icon>
               <Phone />
             </Icon>
-            <span>+234 803 979 3005</span>
+            <span>{social.phone}</span>
           </FooterItem>
           <SocialItem>
             <LinkedIn />

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import social from "../../data/social";
 import Dribbble from "../icons/dribbble";
 import Facebook from "../icons/facebook";
 import Instagram from "../icons/instagram";
@@ -13,7 +14,11 @@ const MobileMenu = ({ open }: IMobileMenu) => {
     <MobileMenuContainer open={open}>
       <MobileMenuItem>My Works</MobileMenuItem>
       <MobileMenuItem>Download Resume</MobileMenuItem>
-      <MobileMenuItem>Schedule a Call</MobileMenuItem>
+      <MobileMenuItem>
+        <a href={`mailto:${social.email}`} target="_blank" rel="noreferrer">
+          Schedule a Call
+        </a>
+      </MobileMenuItem>
 
       <MobileMenuIconContainer>
         <MobileMenuIcon>

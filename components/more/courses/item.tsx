@@ -65,6 +65,7 @@ const CourseName = styled.span`
   font-weight: 500;
   font-size: 18px;
   line-height: 111%;
+  font-family: ${({ theme }) => theme.fontFamilies.heading};
   text-transform: lowercase;
 
   display: block;
