@@ -12,7 +12,7 @@ const WritingItem = ({ writing }: IWritingItem) => {
     <Wrapper>
       <Container>
         <div className="img-container">
-          <img alt={writing.title} src={writing.image} />
+          <img loading="lazy" alt={writing.title} src={writing.image} />
           <LaunchButton text1="view" text2="story " url={writing.url} />
         </div>
         <Content className="writing-content">

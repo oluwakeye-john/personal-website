@@ -11,7 +11,8 @@ const writings: Writing[] = [
   {
     title: "Building Reusable Components with Vue",
     image: optimizeExternalImage(
-      "https://dev-to-uploads.s3.amazonaws.com/i/hq2z2m2m81i06nwmb534.jpg"
+      "https://dev-to-uploads.s3.amazonaws.com/i/hq2z2m2m81i06nwmb534.jpg",
+      800
     ),
     url: "https://dev.to/oluwakeyejohn/building-reusable-components-with-vue-2laa",
     description:
@@ -20,7 +21,8 @@ const writings: Writing[] = [
   {
     title: "Capturing Media With JavaScript",
     image: cloudinaryImage(
-      "v1642182145/portfolio/writings/writing2_aj1yhk.png"
+      "v1642182145/portfolio/writings/writing2_aj1yhk.png",
+      600
     ),
     url: "https://dev.to/oluwakeyejohn/capturing-media-with-javascript-393g",
     description:
