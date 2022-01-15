@@ -7,9 +7,11 @@ export interface Social {
   linkedIn: string;
   phone: string;
   resume: string;
+  me: string;
 }
 
 const social: Social = {
+  me: "https://res.cloudinary.com/johnprops/image/upload/c_scale,f_auto,q_100,w_800/v1642245700/portfolio/me_fjwljv.png",
   email: "bjohnoluwakeye@gmail.com",
   facebook: "https://facebook.com/oluwakeye-john",
   github: "https://github.com/oluwakeye-john",

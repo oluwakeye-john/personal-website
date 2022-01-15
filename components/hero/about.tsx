@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import styled from "styled-components";
+import social from "../../data/social";
 import { Container2, Container3 } from "../container";
 import { Dash } from "../dash";
 
@@ -22,12 +23,11 @@ const HeroAbout = () => {
                   <AboutSectionTitle>john</AboutSectionTitle>
                   <Dash />
                 </InlineBlock>
-                <AboutSectionTitle>beloved</AboutSectionTitle>
                 <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
                 <AboutSection1Tag>Software Developer</AboutSection1Tag>
               </AboutSection1Content>
               <AboutImage>
-                <img alt="Me" src="/me.png" />
+                <img draggable={false} alt="Me" src={social.me} />
               </AboutImage>
             </AboutSection1>
             <AboutSection2>
@@ -164,9 +164,12 @@ const AboutImage = styled.div`
   height: 100%;
 
   img {
+    user-select: none;
+    pointer-events: none;
+
     width: auto;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   ${({ theme }) => theme.media.lg} {
