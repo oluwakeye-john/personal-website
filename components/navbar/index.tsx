@@ -57,7 +57,7 @@ const Navbar = () => {
             <a>john.oluwakeye</a>
           </Link>
         </NavbarCenterItem>
-        <NavbarToggle open={mobileNav} onClick={toggleMobileNav}>
+        <NavbarToggle aria-hidden open={mobileNav} onClick={toggleMobileNav}>
           <NavbarToggleContent open={mobileNav}>
             <div />
             <div />

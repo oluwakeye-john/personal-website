@@ -6,12 +6,11 @@ interface SeoProps {
 }
 
 const Seo = ({ title }: SeoProps) => {
-  const router = useRouter();
   return (
     <Head>
       <title>{title}</title>
       <link rel="shortcut icon" href="/icon.png" />
-      <link rel="canonical" href={router.pathname} />
+      <link rel="canonical" href="https://oluwakeye.com" />
 
       <script
         defer
