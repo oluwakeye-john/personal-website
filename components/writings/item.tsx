@@ -12,7 +12,7 @@ const WritingItem = ({ writing }: IWritingItem) => {
     <Wrapper>
       <Container>
         <div className="img-container">
-          <img alt="Omoo" src={writing.image} />
+          <img alt={writing.title} src={writing.image} />
           <LaunchButton text1="view" text2="story " url={writing.url} />
         </div>
         <Content className="writing-content">
@@ -34,7 +34,9 @@ const Wrapper = styled.div`
     overflow: hidden;
     background-color: #000;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-within {
       .ls {
         transform: scale(1) translateY(0);
         opacity: 1;
@@ -140,6 +142,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  outline: none;
 
   img {
     object-fit: cover;

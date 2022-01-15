@@ -45,7 +45,7 @@ const More = () => {
         <MoreMenu>
           {items.map((item, index) => (
             <MoreMenuItem
-              tabIndex={1}
+              tabIndex={0}
               key={index}
               onClick={() => setCurentIndex(index)}
             >

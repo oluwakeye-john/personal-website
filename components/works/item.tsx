@@ -50,7 +50,9 @@ const WorksItemContent = styled.div`
     transition: 1s ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
     .ls {
       transform: scale(1) translateY(0);
       opacity: 1;

@@ -15,7 +15,17 @@ const ExperienceItemOverview = ({
   experience,
 }: IExperienceItemOverview) => {
   return (
-    <ExperienceOverview onClick={onClick}>
+    <ExperienceOverview
+      tabIndex={0}
+      onClick={onClick}
+      onKeyPress={(e) => {
+        if (e.key === "Enter") {
+          onClick();
+        } else {
+          e.preventDefault();
+        }
+      }}
+    >
       <OverviewTitle>
         {experience.company} - {experience.location}
       </OverviewTitle>

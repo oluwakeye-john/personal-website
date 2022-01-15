@@ -23,6 +23,7 @@ const HeroAbout = () => {
                   <AboutSectionTitle>john</AboutSectionTitle>
                   <Dash />
                 </InlineBlock>
+                <AboutSectionTitle>beloved.</AboutSectionTitle>
                 <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
                 <AboutSection1Tag>Software Developer</AboutSection1Tag>
               </AboutSection1Content>
@@ -111,10 +112,15 @@ const AboutSection1 = styled.div`
   background-color: ${({ theme }) => theme.colors.lightPrimary};
   width: 56%;
   padding: 0 6rem;
+  padding-right: 3rem;
   height: 100%;
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
+
+  ${({ theme }) => theme.media.xxl} {
+    padding: 0 2rem;
+  }
 
   ${({ theme }) => theme.media.md} {
     width: auto;
@@ -153,6 +159,10 @@ const AboutSection2 = styled.div`
   padding: 5rem 3.5rem;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
 
+  ${({ theme }) => theme.media.xxl} {
+    padding: 4rem 2rem;
+  }
+
   ${({ theme }) => theme.media.md} {
     width: auto;
     padding: 4rem 2rem;
@@ -170,15 +180,18 @@ const AboutImage = styled.div`
     width: auto;
     height: 100%;
     object-fit: cover;
+    object-position: bottom;
   }
 
   ${({ theme }) => theme.media.lg} {
-    height: 280px;
-
     img {
       width: 100%;
       height: 100%;
     }
+  }
+
+  ${({ theme }) => theme.media.md} {
+    height: 280px;
   }
 `;
 
@@ -189,7 +202,7 @@ const AboutText = styled.p`
 `;
 
 const AboutSection1Tag = styled.p`
-  font-size: 12px;
+  font-size: 10px;
   color: ${({ theme }) => theme.colors.lightText};
 `;
 
