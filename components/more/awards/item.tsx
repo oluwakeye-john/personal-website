@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import { Award } from "../../../data/awards";
 
@@ -8,7 +9,9 @@ interface IAwardItem {
 const AwardItem = ({ award }: IAwardItem) => {
   return (
     <ItemContainer>
-      <ItemImage />
+      <ItemImage>
+        <img alt={award.title} src={award.image} />
+      </ItemImage>
       <ItemContent>
         <ItemTitle>{award.title}</ItemTitle>
         <ItemText>{award.date}</ItemText>
@@ -30,11 +33,16 @@ const ItemContainer = styled.div`
 `;
 
 const ItemImage = styled.div`
-  background-color: red;
   height: 80px;
   width: 65px;
 
   margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const ItemContent = styled.div`

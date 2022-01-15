@@ -1,22 +1,15 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
-import images from "../../assets/images/images";
 import { Work } from "../../data/works";
+import { cloudinaryImage } from "../../utils/image";
+import LaunchButton from "../launch";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
-        <Image alt="Work 1" layout="fill" src={work.image} />
-        <LaunchButtonContainer className="ls">
-          <LaunchButton href={work.liveUrl} target="_blank">
-            <span>
-              launch
-              <br />
-              app
-            </span>
-          </LaunchButton>
-        </LaunchButtonContainer>
+        <img alt={work.title} src={cloudinaryImage(work.image)} />
+        <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
       </WorksItemContent>
       <WorksItemCaption>{work.title}</WorksItemCaption>
     </WorksItemContainer>
@@ -39,6 +32,7 @@ const WorksItemContainer = styled.div`
 const WorksItemContent = styled.div`
   width: 350px;
   height: 456px;
+  background-color: rgba(255, 255, 255, 0.1);
 
   ${({ theme }) => theme.media.md} {
     width: 304px;
@@ -46,14 +40,19 @@ const WorksItemContent = styled.div`
   }
 
   position: relative;
-  padding: 2rem;
+  overflow: hidden;
 
   img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: 1s ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
     .ls {
       transform: scale(1) translateY(0);
       opacity: 1;
@@ -70,45 +69,8 @@ const WorksItemCaption = styled.p`
   text-align: center;
 
   font-size: 16px;
-  line-height: 26px;
-  font-weight: 300;
-`;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.71);
 
-const LaunchButtonContainer = styled.div`
-  position: absolute;
-
-  bottom: 1rem;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-
-  transform: scale(0) translateY(200px);
-  opacity: 0;
-  transition: 0.5s;
-  cursor: pointer;
-`;
-
-const LaunchButton = styled.a`
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.32);
-
-  width: 100px;
-  height: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  font-weight: 300;
-
-  font-size: 20px;
-  line-height: 94.5%;
-  color: #fff;
-
-  font-family: ${({ theme }) => theme.fontFamilies.alt};
-
-  text-decoration: none;
+  margin: 2rem 0;
 `;

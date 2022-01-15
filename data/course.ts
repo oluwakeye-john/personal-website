@@ -6,6 +6,7 @@ export interface Course {
   issuer: string;
   courseName: string;
   date: string;
+  logo: string;
 }
 
 const courses: Course[] = [
@@ -14,27 +15,30 @@ const courses: Course[] = [
     lineColor: "#ABFFE4",
     hubColor: "#4CE2B2",
 
-    courseName: "Mobile Application\nDevelopment",
+    courseName: "Advanced SVG Animation",
     issuer: "LinkedIn",
-    date: "January 2021",
+    date: "February 2021",
+    logo: "/images/pluralsight.svg",
   },
   {
     bgColor: "#fffde6",
     hubColor: "#FFF6A3",
     lineColor: "#FFF8B7",
 
-    courseName: "Mobile Application\nDevelopment",
+    courseName: "RESTful Web Services with Node.js and Express",
     issuer: "LinkedIn",
-    date: "January 2021",
+    date: "June 2020",
+    logo: "/images/pluralsight.svg",
   },
   {
     bgColor: "#FFE6E3",
     hubColor: "#FF7262",
     lineColor: "#FFCDC8",
 
-    courseName: "Mobile Application\nDevelopment",
-    issuer: "LinkedIn",
-    date: "January 2021",
+    courseName: "React Fundamentals",
+    issuer: "Udemy",
+    date: "November 2019",
+    logo: "/images/udemy.svg",
   },
 ];
 

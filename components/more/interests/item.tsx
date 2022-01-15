@@ -1,14 +1,19 @@
 import Image from "next/image";
 import styled from "styled-components";
 import svgs from "../../../assets/svgs/svg";
+import { Interest } from "../../../data/interests";
 
-const InterestItem = () => {
+interface IInterestItem {
+  interest: Interest;
+}
+
+const InterestItem = ({ interest }: IInterestItem) => {
   return (
     <ItemContainer>
       <Image alt="pizza" src={svgs.pizza} />
       <Content>
-        <Title>food</Title>
-        <Text>Desserts</Text>
+        <Title>{interest.key}</Title>
+        <Text>{interest.value}</Text>
       </Content>
     </ItemContainer>
   );
@@ -25,9 +30,10 @@ const Content = styled.div``;
 
 const Title = styled.span`
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 111%;
-  text-transform: lowercase;
+  font-family: ${({ theme }) => theme.fontFamilies.heading};
+  /* text-transform: lowercase; */
   display: block;
   padding-top: 1rem;
 `;

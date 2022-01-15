@@ -1,9 +1,8 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import Dribbble from "../icons/dribbble";
-import Facebook from "../icons/facebook";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import social from "../../data/social";
 import Instagram from "../icons/instagram";
-import LinkedIn from "../icons/linkedin";
-import Menu from "../icons/menu";
 import MobileMenu from "./mobile-menu";
 import {
   NavbarCenter,
@@ -14,6 +13,7 @@ import {
   NavbarRight,
   NavbarRightItem,
   NavbarToggle,
+  NavbarToggleContent,
 } from "./styles";
 
 const Navbar = () => {
@@ -38,33 +38,57 @@ const Navbar = () => {
   }, []);
 
   return (
-    <NavbarContainer>
+    <NavbarContainer mobileNav={mobileNav}>
       <NavbarLeft>
-        <NavbarLeftItem>My Works</NavbarLeftItem>
-        <NavbarLeftItem>Download Resume</NavbarLeftItem>
+        <NavbarLeftItem>
+          <Link href="/#works">
+            <a>My Works</a>
+          </Link>
+        </NavbarLeftItem>
+        <NavbarLeftItem>
+          <a href={social.resume} target="_blank" rel="noreferrer">
+            Download Résumé
+          </a>
+        </NavbarLeftItem>
       </NavbarLeft>
       <NavbarCenter>
-        <NavbarCenterItem dark={mobileNav}>john.oluwakeye</NavbarCenterItem>
-        <NavbarToggle onClick={toggleMobileNav}>
-          <Menu />
+        <NavbarCenterItem dark={mobileNav}>
+          <Link href="/">
+            <a>john.oluwakeye</a>
+          </Link>
+        </NavbarCenterItem>
+        <NavbarToggle open={mobileNav} onClick={toggleMobileNav}>
+          <NavbarToggleContent open={mobileNav}>
+            <div />
+            <div />
+            <div />
+          </NavbarToggleContent>
         </NavbarToggle>
       </NavbarCenter>
       <NavbarRight>
         <NavbarRightItem>
-          <LinkedIn />
+          <a href={social.linkedIn} target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <Facebook />
+          <a href={social.facebook} target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <Instagram />
+          <a href={social.instagram} target="_blank" rel="noreferrer">
+            <Instagram />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <Dribbble />
+          <a href={social.github} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
         </NavbarRightItem>
       </NavbarRight>
 
-      <MobileMenu open={mobileNav} />
+      <MobileMenu open={mobileNav} toggle={toggleMobileNav} />
     </NavbarContainer>
   );
 };

@@ -1,10 +1,13 @@
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
 import { Container2 } from "../container";
-import Dribbble from "../icons/dribbble";
-import Facebook from "../icons/facebook";
-import Instagram from "../icons/instagram";
-import LinkedIn from "../icons/linkedin";
 import Mail from "../icons/mail";
 import Phone from "../icons/phone";
 
@@ -24,25 +27,41 @@ const Footer = () => {
         </Left>
         <Right>
           <FooterItem>
-            <FooterText>john.oluwakeye</FooterText>
+            <Link href="/">
+              <a>
+                <FooterText>john.oluwakeye</FooterText>
+              </a>
+            </Link>
           </FooterItem>
           <FooterItem>
-            <Icon>
-              <Mail />
-            </Icon>
-            <span>{social.email}</span>
+            <a href={`mailto:${social.email}`} target="_blank" rel="noreferrer">
+              <Icon>
+                <Mail />
+              </Icon>
+              <span>{social.email}</span>
+            </a>
           </FooterItem>
           <FooterItem>
-            <Icon>
-              <Phone />
-            </Icon>
-            <span>{social.phone}</span>
+            <a href={`tel:${social.phone}`} target="_blank" rel="noreferrer">
+              <Icon>
+                <Phone />
+              </Icon>
+              <span>{social.phone}</span>
+            </a>
           </FooterItem>
           <SocialItem>
-            <LinkedIn />
-            <Facebook />
-            <Dribbble />
-            <Instagram />
+            <a href={social.linkedIn} target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+            <a href={social.facebook} target="_blank" rel="noreferrer">
+              <FaFacebookF />
+            </a>
+            <a href={social.github} target="_blank" rel="noreferrer">
+              <FaGithub />
+            </a>
+            <a href={social.instagram} target="_blank" rel="noreferrer">
+              <FaInstagram />
+            </a>
           </SocialItem>
         </Right>
       </Content>
@@ -125,35 +144,61 @@ const FooterItem = styled.div`
   line-height: 24px;
   color: rgba(255, 255, 255, 0.71);
 
-  display: flex;
-  align-items: center;
   margin-bottom: 2rem;
+
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.lightPrimary};
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
 
   svg {
     width: 15px;
     height: 15px;
-    font-size: 40px;
+    vertical-align: middle;
 
     cursor: pointer;
 
     path {
-      fill: #fff;
-      transition: 0.3s ease-in-out;
-    }
-    &:hover {
-      path {
-        fill: ${({ theme }) => theme.colors.primary};
-      }
+      fill: currentColor;
     }
   }
 `;
 
-const SocialItem = styled(FooterItem)`
+const SocialItem = styled.div`
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.71);
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  a {
+    margin-right: 2rem;
+  }
+
   svg {
     width: 15px;
     height: 15px;
+    vertical-align: middle;
 
-    margin-right: 2rem;
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+
+  path {
+    fill: currentColor;
   }
 `;
 

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Container1 } from "../container";
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.div<{ mobileNav?: boolean }>`
   z-index: 5;
   display: flex;
   justify-content: space-between;
@@ -9,7 +9,15 @@ export const NavbarContainer = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.s};
   line-height: 14px;
 
+  top: 0;
+  left: 0;
+  right: 0;
+
   ${Container1};
+
+  ${({ theme }) => theme.media.lg} {
+    position: ${({ mobileNav }) => (mobileNav ? "sticky" : "static")};
+  }
 `;
 
 const HideOnMobile = css`
@@ -73,6 +81,11 @@ export const NavbarRightItem = styled.div`
   margin-left: 2.5rem;
   cursor: pointer;
 
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
   path {
     transition: 0.3s ease-in-out;
   }
@@ -84,10 +97,50 @@ export const NavbarRightItem = styled.div`
   }
 `;
 
-export const NavbarToggle = styled.div`
+export const NavbarToggleContent = styled.div<{ open: boolean }>`
+  height: 20px;
+  width: 20px;
+
+  div {
+    align-self: center;
+    background-color: #fff;
+    height: 2px;
+    margin: 4px 0;
+    transition: 0.3s;
+
+    &:nth-of-type(1) {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform-origin: 5% 10%;
+    }
+
+    &:nth-of-type(2) {
+      opacity: ${({ open }) => (open ? 0 : 1)};
+    }
+
+    &:nth-of-type(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform-origin: 5% 90%;
+    }
+  }
+`;
+
+export const NavbarToggle = styled.button<{ open?: boolean }>`
+  border: none;
+  padding: 0;
   display: none;
+  transition: 1s;
+
   ${({ theme }) => theme.media.lg} {
-    display: block;
+    width: 36px;
+    height: 36px;
+
+    background-color: ${({ open }) => (open ? "transparent" : "#000")};
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     cursor: pointer;
   }
 `;

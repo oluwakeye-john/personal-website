@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/no-unescaped-entities */
-
 import styled from "styled-components";
 import { Writing } from "../../data/writings";
-import { optimizeExternalImage } from "../../utils/image";
+import LaunchButton from "../launch";
 
 interface IWritingItem {
   writing: Writing;
@@ -13,11 +11,10 @@ const WritingItem = ({ writing }: IWritingItem) => {
   return (
     <Wrapper>
       <Container>
-        <a href={writing.url} rel="noreferrer" target="_blank">
-          <div className="img-container">
-            <img alt="Omoo" src={optimizeExternalImage(writing.image)} />
-          </div>
-        </a>
+        <div className="img-container">
+          <img alt={writing.title} src={writing.image} />
+          <LaunchButton text1="view" text2="story " url={writing.url} />
+        </div>
         <Content className="writing-content">
           <Title href={writing.url} rel="noreferrer" target="_blank">
             {writing.title}
@@ -33,8 +30,23 @@ export default WritingItem;
 
 const Wrapper = styled.div`
   .img-container {
+    position: relative;
     overflow: hidden;
     background-color: #000;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      .ls {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+
+      img {
+        opacity: 0.5;
+        transform: scale(1.2);
+      }
+    }
   }
 
   img {
@@ -43,11 +55,6 @@ const Wrapper = styled.div`
     transition: 1s ease-in-out;
     opacity: 1;
     object-fit: cover;
-
-    &:hover {
-      opacity: 0.5;
-      transform: scale(1.2);
-    }
   }
 
   &:nth-child(1) {
@@ -135,6 +142,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  outline: none;
 
   img {
     object-fit: cover;

@@ -1,23 +1,33 @@
 import styled from "styled-components";
+import works from "../../data/works";
 import { Container1 } from "../container";
 import { horizontalScroll } from "../scroll";
 
-const WorksTab = () => {
+interface IWorksTab {
+  currentIndex: number;
+  setCurrentIndex: (n: number) => void;
+  tabs: string[];
+}
+
+const WorksTab = ({ currentIndex, setCurrentIndex, tabs }: IWorksTab) => {
   return (
     <TabContainer>
-      <TabItem>All</TabItem>
-      <TabItem>Web Development</TabItem>
-      <TabItem>App Development</TabItem>
-      <TabItem>Motion</TabItem>
+      {tabs.map((tab, index) => (
+        <TabItem
+          onClick={() => setCurrentIndex(index)}
+          active={currentIndex === index}
+          key={index}
+        >
+          {tab}
+        </TabItem>
+      ))}
     </TabContainer>
   );
 };
 
 const TabContainer = styled.div`
   ${Container1};
-
   ${horizontalScroll};
-
   display: flex;
 
   ${({ theme }) => theme.media.lg} {
@@ -28,8 +38,9 @@ const TabContainer = styled.div`
   }
 `;
 
-const TabItem = styled.div`
-  color: rgba(255, 255, 255, 0.7);
+const TabItem = styled.div<{ active?: boolean }>`
+  color: ${({ active }) => (active ? "#fff" : "rgba(255, 255, 255, 0.7)")};
+  font-weight: ${({ active }) => (active ? "bold" : "400")};
   margin-right: 3rem;
   text-transform: uppercase;
 
@@ -44,11 +55,6 @@ const TabItem = styled.div`
 
   ${({ theme }) => theme.media.lg} {
     margin-right: 1.5rem;
-  }
-
-  &:hover {
-    color: #fff;
-    font-weight: bold;
   }
 `;
 

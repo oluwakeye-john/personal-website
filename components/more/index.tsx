@@ -20,12 +20,12 @@ const items = [
     component: Courses,
   },
   {
-    name: "Awards",
-    component: Awards,
+    name: "Skills",
+    component: Interests,
   },
   {
-    name: "Interests",
-    component: Interests,
+    name: "Awards",
+    component: Awards,
   },
 ];
 
@@ -45,8 +45,15 @@ const More = () => {
         <MoreMenu>
           {items.map((item, index) => (
             <MoreMenuItem
-              tabIndex={1}
+              tabIndex={0}
               key={index}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  setCurentIndex(index);
+                } else {
+                  e.preventDefault();
+                }
+              }}
               onClick={() => setCurentIndex(index)}
             >
               <MoreMenuItemText active={currentIndex === index}>
