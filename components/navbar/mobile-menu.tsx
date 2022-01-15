@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
@@ -5,35 +6,48 @@ import Instagram from "../icons/instagram";
 
 interface IMobileMenu {
   open: boolean;
+  toggle: () => void;
 }
 
-const MobileMenu = ({ open }: IMobileMenu) => {
+const MobileMenu = ({ open, toggle }: IMobileMenu) => {
   return (
     <MobileMenuContainer open={open}>
-      <MobileMenuItem>My Works</MobileMenuItem>
-      <MobileMenuItem>
+      <MobileMenuItem onClick={toggle}>
+        <Link href="/#works">
+          <a>My Works</a>
+        </Link>
+      </MobileMenuItem>
+      <MobileMenuItem onClick={toggle}>
         <a href={social.resume} target="_blank" rel="noreferrer">
-          Download Resume
+          Download Résumé
         </a>
       </MobileMenuItem>
-      <MobileMenuItem>
+      <MobileMenuItemUnderline onClick={toggle}>
         <a href={`mailto:${social.email}`} target="_blank" rel="noreferrer">
           Schedule a Call
         </a>
-      </MobileMenuItem>
+      </MobileMenuItemUnderline>
 
       <MobileMenuIconContainer>
-        <MobileMenuIcon>
-          <FaLinkedinIn />
+        <MobileMenuIcon onClick={toggle}>
+          <a href={social.linkedIn} target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+          </a>
         </MobileMenuIcon>
-        <MobileMenuIcon>
-          <FaFacebookF />
+        <MobileMenuIcon onClick={toggle}>
+          <a href={social.facebook} target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </a>
         </MobileMenuIcon>
-        <MobileMenuIcon>
-          <Instagram />
+        <MobileMenuIcon onClick={toggle}>
+          <a href={social.instagram} target="_blank" rel="noreferrer">
+            <Instagram />
+          </a>
         </MobileMenuIcon>
-        <MobileMenuIcon>
-          <FaGithub />
+        <MobileMenuIcon onClick={toggle}>
+          <a href={social.github} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
         </MobileMenuIcon>
       </MobileMenuIconContainer>
     </MobileMenuContainer>
@@ -80,6 +94,10 @@ export const MobileMenuItem = styled.div`
   font-weight: 200;
   font-size: 30px;
   line-height: 28.35px;
+`;
+
+export const MobileMenuItemUnderline = styled(MobileMenuItem)`
+  text-decoration: underline;
 `;
 
 export const MobileMenuIconContainer = styled(MobileMenuItem)`

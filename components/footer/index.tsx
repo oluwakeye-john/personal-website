@@ -180,12 +180,14 @@ const SocialItem = styled.div`
   align-items: center;
   margin-bottom: 2rem;
 
+  a {
+    margin-right: 2rem;
+  }
+
   svg {
     width: 15px;
     height: 15px;
     vertical-align: middle;
-
-    margin-right: 2rem;
 
     cursor: pointer;
 

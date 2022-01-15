@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import social from "../../data/social";
 import Instagram from "../icons/instagram";
-import Menu from "../icons/menu";
 import MobileMenu from "./mobile-menu";
 import {
   NavbarCenter,
@@ -14,6 +13,7 @@ import {
   NavbarRight,
   NavbarRightItem,
   NavbarToggle,
+  NavbarToggleContent,
 } from "./styles";
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <NavbarContainer>
+    <NavbarContainer mobileNav={mobileNav}>
       <NavbarLeft>
         <NavbarLeftItem>
           <Link href="/#works">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </NavbarLeftItem>
         <NavbarLeftItem>
           <a href={social.resume} target="_blank" rel="noreferrer">
-            Download Resume
+            Download Résumé
           </a>
         </NavbarLeftItem>
       </NavbarLeft>
@@ -57,8 +57,12 @@ const Navbar = () => {
             <a>john.oluwakeye</a>
           </Link>
         </NavbarCenterItem>
-        <NavbarToggle onClick={toggleMobileNav}>
-          <Menu />
+        <NavbarToggle open={mobileNav} onClick={toggleMobileNav}>
+          <NavbarToggleContent open={mobileNav}>
+            <div />
+            <div />
+            <div />
+          </NavbarToggleContent>
         </NavbarToggle>
       </NavbarCenter>
       <NavbarRight>
@@ -84,7 +88,7 @@ const Navbar = () => {
         </NavbarRightItem>
       </NavbarRight>
 
-      <MobileMenu open={mobileNav} />
+      <MobileMenu open={mobileNav} toggle={toggleMobileNav} />
     </NavbarContainer>
   );
 };

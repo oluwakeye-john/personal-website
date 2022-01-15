@@ -21,4 +21,11 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+
+    .disable-scroll {
+        ${({ theme }) => theme.media.lg}{
+            overflow: hidden;
+        }
+    }
+    
 `;

@@ -47,6 +47,13 @@ const More = () => {
             <MoreMenuItem
               tabIndex={0}
               key={index}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  setCurentIndex(index);
+                } else {
+                  e.preventDefault();
+                }
+              }}
               onClick={() => setCurentIndex(index)}
             >
               <MoreMenuItemText active={currentIndex === index}>
