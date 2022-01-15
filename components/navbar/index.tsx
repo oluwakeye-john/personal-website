@@ -63,16 +63,24 @@ const Navbar = () => {
       </NavbarCenter>
       <NavbarRight>
         <NavbarRightItem>
-          <FaLinkedinIn />
+          <a href={social.linkedIn} target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <FaFacebookF />
+          <a href={social.facebook} target="_blank" rel="noreferrer">
+            <FaFacebookF />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <Instagram />
+          <a href={social.instagram} target="_blank" rel="noreferrer">
+            <Instagram />
+          </a>
         </NavbarRightItem>
         <NavbarRightItem>
-          <FaGithub />
+          <a href={social.github} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
         </NavbarRightItem>
       </NavbarRight>
 

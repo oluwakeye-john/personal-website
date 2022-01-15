@@ -11,7 +11,7 @@ export interface Social {
 
 const social: Social = {
   email: "bjohnoluwakeye@gmail.com",
-  facebook: "oluwakeye",
+  facebook: "https://facebook.com/oluwakeye-john",
   github: "https://github.com/oluwakeye-john",
   instagram: "https://www.instagram.com/oluwakeye_john/",
   twitter: "https://twitter.com/oluwakeyejohn",

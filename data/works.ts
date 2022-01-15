@@ -32,7 +32,7 @@ const works: Work[] = [
     index: 4,
     image: "v1642181601/portfolio/projects/pollussports_v96zqt.png",
     title: "Pollussports",
-    liveUrl: "https://rutopay.com",
+    liveUrl: "https://pollusport-frontend.vercel.app/",
     categories: ["Ecommerce"],
   },
   {

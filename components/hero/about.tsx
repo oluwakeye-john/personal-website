@@ -10,9 +10,9 @@ const HeroAbout = () => {
     <AboutWrapper>
       <Relative>
         <HeroTitle>
-          breathing
+          i develop
           <br />
-          pixels
+          software
         </HeroTitle>
         <AboutContainer>
           <AboutContent>

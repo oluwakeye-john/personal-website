@@ -50,10 +50,18 @@ const Footer = () => {
             </a>
           </FooterItem>
           <SocialItem>
-            <FaLinkedinIn />
-            <FaFacebookF />
-            <FaGithub />
-            <FaInstagram />
+            <a href={social.linkedIn} target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+            <a href={social.facebook} target="_blank" rel="noreferrer">
+              <FaFacebookF />
+            </a>
+            <a href={social.github} target="_blank" rel="noreferrer">
+              <FaGithub />
+            </a>
+            <a href={social.instagram} target="_blank" rel="noreferrer">
+              <FaInstagram />
+            </a>
           </SocialItem>
         </Right>
       </Content>
