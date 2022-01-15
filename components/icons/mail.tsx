@@ -1,5 +1,3 @@
-import social from "../../data/social";
-
 const Mail = () => {
   return (
     <svg
@@ -14,14 +12,6 @@ const Mail = () => {
         fill="#4CE2B2"
       />
     </svg>
-  );
-};
-
-export const MailLink = () => {
-  return (
-    <a href={social.email} rel="noreferrer" target="_blank">
-      <Mail />
-    </a>
   );
 };
 

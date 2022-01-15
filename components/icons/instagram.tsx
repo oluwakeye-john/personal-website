@@ -17,12 +17,4 @@ const Instagram = () => {
   );
 };
 
-export const InstagramLink = () => {
-  return (
-    <a href={social.instagram} rel="noreferrer" target="_blank">
-      <Instagram />
-    </a>
-  );
-};
-
 export default Instagram;

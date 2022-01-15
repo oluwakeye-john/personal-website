@@ -30,22 +30,42 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
 
       <MobileMenuIconContainer>
         <MobileMenuIcon onClick={toggle}>
-          <a href={social.linkedIn} target="_blank" rel="noreferrer">
+          <a
+            href={social.linkedIn}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
             <FaLinkedinIn />
           </a>
         </MobileMenuIcon>
         <MobileMenuIcon onClick={toggle}>
-          <a href={social.facebook} target="_blank" rel="noreferrer">
+          <a
+            href={social.facebook}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
             <FaFacebookF />
           </a>
         </MobileMenuIcon>
         <MobileMenuIcon onClick={toggle}>
-          <a href={social.instagram} target="_blank" rel="noreferrer">
+          <a
+            href={social.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
             <Instagram />
           </a>
         </MobileMenuIcon>
         <MobileMenuIcon onClick={toggle}>
-          <a href={social.github} target="_blank" rel="noreferrer">
+          <a
+            href={social.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Github"
+          >
             <FaGithub />
           </a>
         </MobileMenuIcon>
