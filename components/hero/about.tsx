@@ -13,11 +13,11 @@ const HeroAbout = () => {
       <Relative>
         <SlideInWrapper scrollTriggered={false} stagger={0.5}>
           <HeroTitle style={{ zIndex: 1 }}>
-            <SlideChild x={80} alt stiffness={100}>
+            <SlideChild x={100} alt stiffness={80}>
               i develop
               <br />
             </SlideChild>
-            <SlideChild x={80} alt stiffness={100}>
+            <SlideChild x={100} alt stiffness={80}>
               software
             </SlideChild>
           </HeroTitle>
@@ -40,13 +40,17 @@ const HeroAbout = () => {
               <AboutSection2>
                 <AboutSectionTitle>about me</AboutSectionTitle>
                 <AboutText>
-                  Welcome to my little corner of the web, where I'll be sharing
-                  notes, code snippets, and resources on topics that interest me
-                  and updates on projects I'm working on.
+                  I'm a software developer based in Ibadan, Nigeria. I have over
+                  3 years of professional experience developing web
+                  applications.
                 </AboutText>
                 <AboutText>
-                  Where I'll be sharing notes, code snippets, and resources on
-                  topics that interest me and updates on projects.
+                  Currently, I work at Helicarrier as a Frontend Engineer, where
+                  we develop crypto infrastructure for Africa.
+                </AboutText>
+                <AboutText>
+                  In my free time, I play games(Population One / CODM) and watch
+                  movies.
                 </AboutText>
               </AboutSection2>
             </AboutContent>
