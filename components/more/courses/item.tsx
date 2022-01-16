@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import { Course } from "../../../data/course";
+import { SlideChild } from "../../slide-in";
 import { CoursesPattern1, CoursesPattern2 } from "./icons";
 
 interface ICourseItem {
@@ -9,23 +10,25 @@ interface ICourseItem {
 
 const CourseItem = ({ course }: ICourseItem) => {
   return (
-    <CourseContainer color={course.bgColor}>
-      <Content>
-        <Issuer>
-          <img alt={course.issuer} src={course.logo} />
-        </Issuer>
-        <div>
-          <CourseName>{course.courseName}</CourseName>
-          <CourseDate>{course.date}</CourseDate>
-        </div>
-      </Content>
-      <CenterPattern>
-        <CoursesPattern1 color={course.lineColor} />
-      </CenterPattern>
-      <LeftPattern>
-        <CoursesPattern2 color={course.hubColor} />
-      </LeftPattern>
-    </CourseContainer>
+    <SlideChild y={50}>
+      <CourseContainer color={course.bgColor}>
+        <Content>
+          <Issuer>
+            <img alt={course.issuer} src={course.logo} />
+          </Issuer>
+          <div>
+            <CourseName>{course.courseName}</CourseName>
+            <CourseDate>{course.date}</CourseDate>
+          </div>
+        </Content>
+        <CenterPattern>
+          <CoursesPattern1 color={course.lineColor} />
+        </CenterPattern>
+        <LeftPattern>
+          <CoursesPattern2 color={course.hubColor} />
+        </LeftPattern>
+      </CourseContainer>
+    </SlideChild>
   );
 };
 

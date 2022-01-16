@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { Writing } from "../../data/writings";
 import LaunchButton from "../launch";
+import { SlideChild } from "../slide-in";
 
 interface IWritingItem {
   writing: Writing;
@@ -10,18 +11,20 @@ interface IWritingItem {
 const WritingItem = ({ writing }: IWritingItem) => {
   return (
     <Wrapper>
-      <Container>
-        <div className="img-container">
-          <img loading="lazy" alt={writing.title} src={writing.image} />
-          <LaunchButton text1="view" text2="story " url={writing.url} />
-        </div>
-        <Content className="writing-content">
-          <Title href={writing.url} rel="noreferrer" target="_blank">
-            {writing.title}
-          </Title>
-          <Text>{writing.description}</Text>
-        </Content>
-      </Container>
+      <SlideChild>
+        <Container>
+          <div className="img-container">
+            <img loading="lazy" alt={writing.title} src={writing.image} />
+            <LaunchButton text1="view" text2="story " url={writing.url} />
+          </div>
+          <Content className="writing-content">
+            <Title href={writing.url} rel="noreferrer" target="_blank">
+              {writing.title}
+            </Title>
+            <Text>{writing.description}</Text>
+          </Content>
+        </Container>
+      </SlideChild>
     </Wrapper>
   );
 };
@@ -83,6 +86,10 @@ const Wrapper = styled.div`
       .img-container {
         height: 250px;
       }
+
+      .writing-content {
+        max-width: 100%;
+      }
     }
   }
 
@@ -109,6 +116,10 @@ const Wrapper = styled.div`
       .img-container {
         height: 250px;
       }
+
+      .writing-content {
+        max-width: 100%;
+      }
     }
   }
 
@@ -134,6 +145,10 @@ const Wrapper = styled.div`
 
       .img-container {
         height: 250px;
+      }
+
+      .writing-content {
+        max-width: 100%;
       }
     }
   }

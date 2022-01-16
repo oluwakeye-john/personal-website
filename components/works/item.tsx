@@ -3,15 +3,18 @@ import styled from "styled-components";
 import { Work } from "../../data/works";
 import { cloudinaryImage } from "../../utils/image";
 import LaunchButton from "../launch";
+import { SlideChild } from "../slide-in";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
-      <WorksItemContent>
-        <img alt={work.title} src={cloudinaryImage(work.image, 650)} />
-        <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
-      </WorksItemContent>
-      <WorksItemCaption>{work.title}</WorksItemCaption>
+      <SlideChild y={50}>
+        <WorksItemContent>
+          <img alt={work.title} src={cloudinaryImage(work.image, 650)} />
+          <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
+        </WorksItemContent>
+        <WorksItemCaption>{work.title}</WorksItemCaption>
+      </SlideChild>
     </WorksItemContainer>
   );
 };

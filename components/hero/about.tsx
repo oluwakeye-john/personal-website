@@ -11,13 +11,15 @@ const HeroAbout = () => {
   return (
     <AboutWrapper>
       <Relative>
-        <SlideInWrapper stagger={0.3}>
+        <SlideInWrapper scrollTriggered={false} stagger={0.5}>
           <HeroTitle style={{ zIndex: 1 }}>
-            <SlideChild stiffness={80}>
+            <SlideChild x={80} alt stiffness={100}>
               i develop
               <br />
             </SlideChild>
-            <SlideChild stiffness={80}>software</SlideChild>
+            <SlideChild x={80} alt stiffness={100}>
+              software
+            </SlideChild>
           </HeroTitle>
           <AboutContainer>
             <AboutContent>
@@ -125,6 +127,7 @@ const AboutSection1 = styled.div`
 
   ${({ theme }) => theme.media.xxl} {
     padding: 0 2rem;
+    padding-right: 0;
   }
 
   ${({ theme }) => theme.media.md} {
@@ -132,6 +135,7 @@ const AboutSection1 = styled.div`
     padding: 0 2rem;
     padding-top: 1rem;
     margin-left: 1.5rem;
+    padding-right: 0;
   }
 `;
 
@@ -208,6 +212,7 @@ const AboutText = styled.p`
 
 const AboutSection1Tag = styled.p`
   font-size: 10px;
+  line-height: 15px;
   color: ${({ theme }) => theme.colors.lightText};
 `;
 

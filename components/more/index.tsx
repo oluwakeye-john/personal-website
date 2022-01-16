@@ -47,27 +47,25 @@ const More = () => {
         </SlideChild>
         <MoreContent>
           <MoreMenu>
-            <SlideChild stiffness={50}>
-              {items.map((item, index) => (
-                <MoreMenuItem
-                  tabIndex={0}
-                  key={index}
-                  onKeyPress={(e) => {
-                    if (e.key === "Enter") {
-                      setCurentIndex(index);
-                    } else {
-                      e.preventDefault();
-                    }
-                  }}
-                  onClick={() => setCurentIndex(index)}
-                >
-                  <MoreMenuItemText active={currentIndex === index}>
-                    {item.name}
-                  </MoreMenuItemText>
-                  {currentIndex === index && <MenuDash right />}
-                </MoreMenuItem>
-              ))}
-            </SlideChild>
+            {items.map((item, index) => (
+              <MoreMenuItem
+                tabIndex={0}
+                key={index}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    setCurentIndex(index);
+                  } else {
+                    e.preventDefault();
+                  }
+                }}
+                onClick={() => setCurentIndex(index)}
+              >
+                <MoreMenuItemText active={currentIndex === index}>
+                  {item.name}
+                </MoreMenuItemText>
+                {currentIndex === index && <MenuDash right />}
+              </MoreMenuItem>
+            ))}
           </MoreMenu>
           <MoreDetails>
             <SlideChild>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Experience } from "../../../data/experience";
+import { SlideChild } from "../../slide-in";
 import ExperienceItemDetails from "./details";
 import ExperienceItemOverview from "./overview";
 
@@ -12,18 +13,20 @@ interface IExperienceItem {
 const ExperienceItem = ({ active, onClick, experience }: IExperienceItem) => {
   return (
     <ExperienceItemContainer>
-      <Tick>
-        <Dot />
-      </Tick>
-      <Control />
-      <Content>
-        <ExperienceItemOverview
-          experience={experience}
-          active={active}
-          onClick={onClick}
-        />
-        <ExperienceItemDetails experience={experience} active={active} />
-      </Content>
+      <SlideChild y={50}>
+        <Tick>
+          <Dot />
+        </Tick>
+        <Control />
+        <Content>
+          <ExperienceItemOverview
+            experience={experience}
+            active={active}
+            onClick={onClick}
+          />
+          <ExperienceItemDetails experience={experience} active={active} />
+        </Content>
+      </SlideChild>
     </ExperienceItemContainer>
   );
 };

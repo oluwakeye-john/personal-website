@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import experiences from "../../../data/experience";
+import SlideInWrapper from "../../slide-in";
 import ExperienceItem from "./item";
 
 const Experience = () => {
@@ -8,16 +9,18 @@ const Experience = () => {
 
   return (
     <ExperienceContainer>
-      {experiences.map((experience, i) => (
-        <ExperienceItem
-          experience={experience}
-          key={i}
-          active={currentIndex === i}
-          onClick={() => {
-            setCurrentIndex(i);
-          }}
-        />
-      ))}
+      <SlideInWrapper>
+        {experiences.map((experience, i) => (
+          <ExperienceItem
+            key={i}
+            experience={experience}
+            active={currentIndex === i}
+            onClick={() => {
+              setCurrentIndex(i);
+            }}
+          />
+        ))}
+      </SlideInWrapper>
     </ExperienceContainer>
   );
 };

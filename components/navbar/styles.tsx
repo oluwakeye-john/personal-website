@@ -68,11 +68,13 @@ export const NavbarCenterItem = styled.h2<{ dark?: boolean }>`
   font-size: ${({ theme }) => theme.fontSizes.h};
   font-family: ${({ theme }) => theme.fontFamilies.heading};
   letter-spacing: -0.1em;
+  padding-right: 2px;
   margin: 0;
   cursor: pointer;
   transition: 1.5s color;
 
   ${({ theme }) => theme.media.lg} {
+    flex: 1;
     color: ${({ dark }) => (dark ? "#fff" : "#000")};
   }
 `;

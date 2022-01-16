@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import awards from "../../../data/awards";
+import SlideInWrapper from "../../slide-in";
 import AwardItem from "./item";
 
 const Awards = () => {
   return (
-    <AwardsContainer>
-      {awards.map((award, index) => (
-        <AwardItem award={award} key={index} />
-      ))}
-    </AwardsContainer>
+    <SlideInWrapper stagger={0.1}>
+      <AwardsContainer>
+        {awards.map((award, index) => (
+          <AwardItem award={award} key={index} />
+        ))}
+      </AwardsContainer>
+    </SlideInWrapper>
   );
 };
 

@@ -52,9 +52,7 @@ const Works = () => {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
-        <SlideChild stiffness={50}>
-          <WorksSlide list={currentWorks} />
-        </SlideChild>
+        <WorksSlide list={currentWorks} />
       </WorksContainer>
     </SlideInWrapper>
   );

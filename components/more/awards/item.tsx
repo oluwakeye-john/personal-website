@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import { Award } from "../../../data/awards";
+import { SlideChild } from "../../slide-in";
 
 interface IAwardItem {
   award: Award;
@@ -8,15 +9,17 @@ interface IAwardItem {
 
 const AwardItem = ({ award }: IAwardItem) => {
   return (
-    <ItemContainer>
-      <ItemImage>
-        <img alt={award.title} src={award.image} />
-      </ItemImage>
-      <ItemContent>
-        <ItemTitle>{award.title}</ItemTitle>
-        <ItemText>{award.date}</ItemText>
-      </ItemContent>
-    </ItemContainer>
+    <SlideChild y={50}>
+      <ItemContainer>
+        <ItemImage>
+          <img alt={award.title} src={award.image} />
+        </ItemImage>
+        <ItemContent>
+          <ItemTitle>{award.title}</ItemTitle>
+          <ItemText>{award.date}</ItemText>
+        </ItemContent>
+      </ItemContainer>
+    </SlideChild>
   );
 };
 
