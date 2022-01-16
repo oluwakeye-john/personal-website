@@ -15,6 +15,7 @@ import {
   NavbarToggle,
   NavbarToggleContent,
 } from "./styles";
+import { motion, Variants } from "framer-motion";
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -37,83 +38,99 @@ const Navbar = () => {
     };
   }, []);
 
-  return (
-    <NavbarContainer mobileNav={mobileNav}>
-      <NavbarLeft>
-        <NavbarLeftItem>
-          <Link href="/#works">
-            <a>My Works</a>
-          </Link>
-        </NavbarLeftItem>
-        <NavbarLeftItem>
-          <a href={social.resume} target="_blank" rel="noreferrer">
-            Download Résumé
-          </a>
-        </NavbarLeftItem>
-      </NavbarLeft>
-      <NavbarCenter>
-        <NavbarCenterItem dark={mobileNav}>
-          <Link href="/">
-            <a>john.oluwakeye</a>
-          </Link>
-        </NavbarCenterItem>
-        <NavbarToggle
-          aria-label="menu"
-          open={mobileNav}
-          onClick={toggleMobileNav}
-        >
-          <NavbarToggleContent open={mobileNav}>
-            <div />
-            <div />
-            <div />
-          </NavbarToggleContent>
-        </NavbarToggle>
-      </NavbarCenter>
-      <NavbarRight>
-        <NavbarRightItem>
-          <a
-            href={social.linkedIn}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedinIn />
-          </a>
-        </NavbarRightItem>
-        <NavbarRightItem>
-          <a
-            href={social.facebook}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook"
-          >
-            <FaFacebookF />
-          </a>
-        </NavbarRightItem>
-        <NavbarRightItem>
-          <a
-            href={social.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-          >
-            <Instagram />
-          </a>
-        </NavbarRightItem>
-        <NavbarRightItem>
-          <a
-            href={social.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Github"
-          >
-            <FaGithub />
-          </a>
-        </NavbarRightItem>
-      </NavbarRight>
+  const variants: Variants = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+      },
+    },
+  };
 
-      <MobileMenu open={mobileNav} toggle={toggleMobileNav} />
-    </NavbarContainer>
+  return (
+    <motion.div initial="hidden" variants={variants} animate="visible">
+      <NavbarContainer mobileNav={mobileNav}>
+        <NavbarLeft>
+          <NavbarLeftItem>
+            <Link href="/#works">
+              <a>My Works</a>
+            </Link>
+          </NavbarLeftItem>
+          <NavbarLeftItem>
+            <a href={social.resume} target="_blank" rel="noreferrer">
+              Download Résumé
+            </a>
+          </NavbarLeftItem>
+        </NavbarLeft>
+        <NavbarCenter>
+          <NavbarCenterItem dark={mobileNav}>
+            <Link href="/">
+              <a>john.oluwakeye</a>
+            </Link>
+          </NavbarCenterItem>
+          <NavbarToggle
+            aria-label="menu"
+            open={mobileNav}
+            onClick={toggleMobileNav}
+          >
+            <NavbarToggleContent open={mobileNav}>
+              <div />
+              <div />
+              <div />
+            </NavbarToggleContent>
+          </NavbarToggle>
+        </NavbarCenter>
+        <NavbarRight>
+          <NavbarRightItem>
+            <a
+              href={social.linkedIn}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+          </NavbarRightItem>
+          <NavbarRightItem>
+            <a
+              href={social.facebook}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+          </NavbarRightItem>
+          <NavbarRightItem>
+            <a
+              href={social.instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <Instagram />
+            </a>
+          </NavbarRightItem>
+          <NavbarRightItem>
+            <a
+              href={social.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Github"
+            >
+              <FaGithub />
+            </a>
+          </NavbarRightItem>
+        </NavbarRight>
+
+        <MobileMenu open={mobileNav} toggle={toggleMobileNav} />
+      </NavbarContainer>
+    </motion.div>
   );
 };
 

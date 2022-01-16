@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import works, { Work } from "../../data/works";
 import CustomHeading from "../heading";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 import WorksSlide from "./slide";
 import WorksTab from "./tab";
 
@@ -39,19 +40,23 @@ const Works = () => {
   }, [currentIndex]);
 
   return (
-    <WorksContainer id="works">
-      <CustomHeading
-        dark
-        title="My Recent Projects"
-        description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
-      />
-      <WorksTab
-        tabs={tabs}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-      />
-      <WorksSlide list={currentWorks} />
-    </WorksContainer>
+    <SlideInWrapper>
+      <WorksContainer id="works">
+        <CustomHeading
+          dark
+          title="My Recent Projects"
+          description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
+        />
+        <WorksTab
+          tabs={tabs}
+          currentIndex={currentIndex}
+          setCurrentIndex={setCurrentIndex}
+        />
+        <SlideChild stiffness={50}>
+          <WorksSlide list={currentWorks} />
+        </SlideChild>
+      </WorksContainer>
+    </SlideInWrapper>
   );
 };
 

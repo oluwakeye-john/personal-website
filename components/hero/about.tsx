@@ -5,46 +5,51 @@ import styled from "styled-components";
 import social from "../../data/social";
 import { Container2, Container3 } from "../container";
 import { Dash } from "../dash";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 
 const HeroAbout = () => {
   return (
     <AboutWrapper>
       <Relative>
-        <HeroTitle>
-          i develop
-          <br />
-          software
-        </HeroTitle>
-        <AboutContainer>
-          <AboutContent>
-            <AboutSection1>
-              <AboutSection1Content>
-                <InlineBlock>
-                  <AboutSectionTitle>john</AboutSectionTitle>
-                  <Dash />
-                </InlineBlock>
-                <AboutSectionTitle>beloved.</AboutSectionTitle>
-                <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
-                <AboutSection1Tag>Software Developer</AboutSection1Tag>
-              </AboutSection1Content>
-              <AboutImage>
-                <img draggable={false} alt="Me" src={social.me} />
-              </AboutImage>
-            </AboutSection1>
-            <AboutSection2>
-              <AboutSectionTitle>about me</AboutSectionTitle>
-              <AboutText>
-                Welcome to my little corner of the web, where I'll be sharing
-                notes, code snippets, and resources on topics that interest me
-                and updates on projects I'm working on.
-              </AboutText>
-              <AboutText>
-                Where I'll be sharing notes, code snippets, and resources on
-                topics that interest me and updates on projects.
-              </AboutText>
-            </AboutSection2>
-          </AboutContent>
-        </AboutContainer>
+        <SlideInWrapper stagger={0.3}>
+          <HeroTitle style={{ zIndex: 1 }}>
+            <SlideChild stiffness={80}>
+              i develop
+              <br />
+            </SlideChild>
+            <SlideChild stiffness={80}>software</SlideChild>
+          </HeroTitle>
+          <AboutContainer>
+            <AboutContent>
+              <AboutSection1>
+                <AboutSection1Content>
+                  <InlineBlock>
+                    <AboutSectionTitle>john</AboutSectionTitle>
+                    <Dash />
+                  </InlineBlock>
+                  <AboutSectionTitle>beloved.</AboutSectionTitle>
+                  <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
+                  <AboutSection1Tag>Software Developer</AboutSection1Tag>
+                </AboutSection1Content>
+                <AboutImage>
+                  <img draggable={false} alt="John Oluwakeye" src={social.me} />
+                </AboutImage>
+              </AboutSection1>
+              <AboutSection2>
+                <AboutSectionTitle>about me</AboutSectionTitle>
+                <AboutText>
+                  Welcome to my little corner of the web, where I'll be sharing
+                  notes, code snippets, and resources on topics that interest me
+                  and updates on projects I'm working on.
+                </AboutText>
+                <AboutText>
+                  Where I'll be sharing notes, code snippets, and resources on
+                  topics that interest me and updates on projects.
+                </AboutText>
+              </AboutSection2>
+            </AboutContent>
+          </AboutContainer>
+        </SlideInWrapper>
       </Relative>
     </AboutWrapper>
   );

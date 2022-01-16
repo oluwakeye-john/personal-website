@@ -2,21 +2,27 @@ import styled from "styled-components";
 import writings from "../../data/writings";
 import { Container1 } from "../container";
 import CustomHeading from "../heading";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 import WritingItem from "./item";
 
 const RecentWritings = () => {
   return (
-    <WritingsContainer>
-      <CustomHeading
-        title="My Recent Writings"
-        description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
-      />
-      <WritingsContent>
-        {writings.map((writing, index) => (
-          <WritingItem writing={writing} key={index} />
-        ))}
-      </WritingsContent>
-    </WritingsContainer>
+    <SlideInWrapper>
+      <WritingsContainer>
+        <CustomHeading
+          title="My Recent Writings"
+          description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
+        />
+
+        <SlideChild stiffness={50}>
+          <WritingsContent>
+            {writings.map((writing, index) => (
+              <WritingItem writing={writing} key={index} />
+            ))}
+          </WritingsContent>
+        </SlideChild>
+      </WritingsContainer>
+    </SlideInWrapper>
   );
 };
 

@@ -10,7 +10,10 @@ import RecentWritings from "../components/writings";
 const Home: NextPage = () => {
   return (
     <>
-      <Seo title="John Oluwakeye | Software Developer" />
+      <Seo
+        title="John Oluwakeye | Software Developer"
+        description="I am a Software developer"
+      />
       <Navbar />
       <Hero />
       <Works />
