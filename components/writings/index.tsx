@@ -11,7 +11,7 @@ const RecentWritings = () => {
       <WritingsContainer>
         <CustomHeading
           title="My Recent Writings"
-          description="Welcome to my little corner of the web, where I'll be sharing notes, code snippets, and resources on topics that interest me and updates on projects I'm working on."
+          description="Writing is not just the technical act of your fingers on the keyboard. Writing is living. - Melissa Marr"
         />
 
         <SlideInWrapper>

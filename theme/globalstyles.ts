@@ -23,7 +23,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     * {
-        outline-color: ${({ theme }) => theme.colors.primary};
+        &:focus{
+            outline-color: ${({ theme }) => theme.colors.primary};
+        }
     }
 
     a {

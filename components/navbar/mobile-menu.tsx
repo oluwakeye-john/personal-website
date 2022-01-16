@@ -53,7 +53,6 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
         animation.start("visible");
       }, 1000);
     } else {
-      console.log("here");
       animation.start("hidden");
     }
   }, [open]);

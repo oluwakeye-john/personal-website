@@ -7,11 +7,11 @@ const HeroServices = () => {
   return (
     <SlideInWrapper stagger={0.1} once={false}>
       <ServicesContainer>
-        <SectionDash text="my services" rightDash />
+        <SectionDash text="what i do" rightDash />
         <ServicesContent>
           <ServicesFlex>
             <ServiceItem>
-              <SlideChild y={50}>Branding</SlideChild>
+              <SlideChild y={50}>UI Design</SlideChild>
             </ServiceItem>
             <ServiceItem>
               <SlideChild y={50}>Web Development</SlideChild>
@@ -22,10 +22,10 @@ const HeroServices = () => {
           </ServicesFlex>
           <ServicesFlex>
             <ServiceItem>
-              <SlideChild y={50}>SEO/Marketing &nbsp; &nbsp;</SlideChild>
+              <SlideChild y={50}>Technical Writing &nbsp; &nbsp;</SlideChild>
             </ServiceItem>
             <ServiceItem>
-              <SlideChild y={50}>Motion & Illustration</SlideChild>
+              <SlideChild y={50}>Embedded Systems / IOT</SlideChild>
             </ServiceItem>
             <ServiceItem />
           </ServicesFlex>

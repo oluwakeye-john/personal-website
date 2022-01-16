@@ -40,9 +40,8 @@ const HeroAbout = () => {
               <AboutSection2>
                 <AboutSectionTitle>about me</AboutSectionTitle>
                 <AboutText>
-                  I'm a software developer based in Ibadan, Nigeria. I have over
-                  3 years of professional experience developing web
-                  applications.
+                  I'm a pragmatic software developer based in Nigeria with 3
+                  years of professional experience developing web applications.
                 </AboutText>
                 <AboutText>
                   Currently, I work at Helicarrier as a Frontend Engineer, where
