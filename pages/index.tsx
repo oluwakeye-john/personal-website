@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     <>
       <Seo
         title="John Oluwakeye | Software Developer"
-        description="I'm a software developer based in Ibadan, Nigeria. I have 3 years of professional experience developing web applications."
+        description="I'm a software developer based in Nigeria with 3 years of professional experience developing web applications."
       />
       <Navbar />
       <Hero />

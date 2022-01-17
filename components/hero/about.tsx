@@ -11,13 +11,13 @@ const HeroAbout = () => {
   return (
     <AboutWrapper>
       <Relative>
-        <SlideInWrapper scrollTriggered={false} stagger={0.5}>
+        <SlideInWrapper scrollTriggered={false} stagger={0.3}>
           <HeroTitle style={{ zIndex: 1 }}>
             <SlideChild x={100} alt stiffness={80}>
               i develop
               <br />
             </SlideChild>
-            <SlideChild x={100} alt stiffness={80}>
+            <SlideChild x={-100} alt stiffness={80}>
               software
             </SlideChild>
           </HeroTitle>
@@ -34,7 +34,13 @@ const HeroAbout = () => {
                   <AboutSection1Tag>Software Developer</AboutSection1Tag>
                 </AboutSection1Content>
                 <AboutImage>
-                  <img draggable={false} alt="John Oluwakeye" src={social.me} />
+                  <SlideChild y={-50} stiffness={80}>
+                    <img
+                      draggable={false}
+                      alt="John Oluwakeye"
+                      src={social.me}
+                    />
+                  </SlideChild>
                 </AboutImage>
               </AboutSection1>
               <AboutSection2>
@@ -202,6 +208,11 @@ const AboutImage = styled.div`
     height: 100%;
     object-fit: cover;
     object-position: bottom;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
   }
 
   ${({ theme }) => theme.media.lg} {
