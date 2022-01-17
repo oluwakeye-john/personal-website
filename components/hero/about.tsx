@@ -38,7 +38,7 @@ const HeroAbout = () => {
                 </AboutImage>
               </AboutSection1>
               <AboutSection2>
-                <AboutSectionTitle>about me</AboutSectionTitle>
+                <AboutSectionTitleSpaced>about me</AboutSectionTitleSpaced>
                 <AboutText>
                   I'm a pragmatic software developer based in Nigeria with 3
                   years of professional experience developing web applications.
@@ -158,7 +158,8 @@ const AboutSection1Content = styled.div`
   }
 `;
 
-const AboutSectionTitle = styled.span`
+const AboutSectionTitle = styled.h3`
+  margin: 0;
   font-family: ${({ theme }) => theme.fontFamilies.heading};
   font-weight: bold;
   font-size: 20px;
@@ -166,13 +167,21 @@ const AboutSectionTitle = styled.span`
   letter-spacing: -0.1em;
 `;
 
+const AboutSectionTitleSpaced = styled(AboutSectionTitle)`
+  margin-bottom: 1rem;
+`;
+
 const AboutSection2 = styled.div`
   width: 44%;
-  padding: 5rem 3.5rem;
+  padding: 2rem 3.5rem;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   ${({ theme }) => theme.media.xxl} {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
   }
 
   ${({ theme }) => theme.media.md} {
@@ -210,6 +219,7 @@ const AboutImage = styled.div`
 const AboutText = styled.p`
   font-weight: 300;
   font-size: 13px;
+  margin: 0.43rem 0;
   color: ${({ theme }) => theme.colors.lightText};
 `;
 
