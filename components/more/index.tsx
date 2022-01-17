@@ -6,7 +6,6 @@ import { YellowDash } from "../dash";
 import { horizontalScroll } from "../scroll";
 import SlideInWrapper, { SlideChild } from "../slide-in";
 import { SectionHeading } from "../text";
-import Awards from "./awards";
 import Courses from "./courses";
 import Experience from "./experience";
 import Interests from "./interests";
@@ -24,10 +23,10 @@ const items = [
     name: "Skills",
     component: Interests,
   },
-  {
-    name: "Awards",
-    component: Awards,
-  },
+  // {
+  //   name: "Awards",
+  //   component: Awards,
+  // },
 ];
 
 const More = () => {

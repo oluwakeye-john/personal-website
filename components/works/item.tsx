@@ -8,13 +8,11 @@ import { SlideChild } from "../slide-in";
 const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
-      <SlideChild y={50}>
-        <WorksItemContent>
-          <img alt={work.title} src={cloudinaryImage(work.image, 650)} />
-          <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
-        </WorksItemContent>
-        <WorksItemCaption>{work.title}</WorksItemCaption>
-      </SlideChild>
+      <WorksItemContent>
+        <img alt={work.title} src={cloudinaryImage(work.image, 650)} />
+        <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
+      </WorksItemContent>
+      <WorksItemCaption>{work.title}</WorksItemCaption>
     </WorksItemContainer>
   );
 };

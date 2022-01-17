@@ -45,7 +45,7 @@ const Works = () => {
         <CustomHeading
           dark
           title="My Recent Projects"
-          description="Here are some of my recent works across many disciplines."
+          description="Here are some awesome projects I worked on recently. These projects cut across finance, crypto, e-commerce, among others."
         />
         <WorksTab
           tabs={tabs}
