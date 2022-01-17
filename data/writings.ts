@@ -16,7 +16,7 @@ const writings: Writing[] = [
     ),
     url: "https://dev.to/oluwakeyejohn/building-reusable-components-with-vue-2laa",
     description:
-      "Let's take a look at how we can create reusable components with VueJS using props and slots. components with VueJS using props and slots.",
+      "Let's take a look at how we can create reusable components with VueJS using props and slots.",
   },
   {
     title: "Capturing Media With JavaScript",
@@ -26,7 +26,7 @@ const writings: Writing[] = [
     ),
     url: "https://dev.to/oluwakeyejohn/capturing-media-with-javascript-393g",
     description:
-      "In this post, we will access the media inputs of a device using the MediaDevices API.using the MediaDevices API.",
+      "In this post, we will access the media inputs of a device using the MediaDevices API.",
   },
   {
     title: "My New Website (tools and kits)",
@@ -36,7 +36,7 @@ const writings: Writing[] = [
     ),
     url: "https://dev.to/oluwakeyejohn/my-new-website-tools-and-kits-2ge1",
     description:
-      "After a long time of procastinating, I've finally been able to make time to create my own personal website. personal website",
+      "After a long time of procastinating, I've finally been able to make time to create my own personal website.",
   },
 ];
 

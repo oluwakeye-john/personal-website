@@ -7,47 +7,47 @@ export interface Interest {
 const interests: Interest[] = [
   {
     key: "React",
-    value: "Facebook",
+    value: "<-//->",
   },
   {
     key: "VueJS",
-    value: "Pop",
+    value: "<-//->",
   },
   {
     key: "NextJS",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "NuxtJS",
-    value: "Twitter",
+    value: "<-//->",
   },
   {
     key: "TypeScript",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "JavaScript",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "Golang",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "React Native",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "SCSS",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "GraphQL",
-    value: "here and there",
+    value: "<-//->",
   },
   {
     key: "NodeJS",
-    value: "here and there",
+    value: "<-//->",
   },
 ];
 

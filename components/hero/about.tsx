@@ -5,46 +5,56 @@ import styled from "styled-components";
 import social from "../../data/social";
 import { Container2, Container3 } from "../container";
 import { Dash } from "../dash";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 
 const HeroAbout = () => {
   return (
     <AboutWrapper>
       <Relative>
-        <HeroTitle>
-          i develop
-          <br />
-          software
-        </HeroTitle>
-        <AboutContainer>
-          <AboutContent>
-            <AboutSection1>
-              <AboutSection1Content>
-                <InlineBlock>
-                  <AboutSectionTitle>john</AboutSectionTitle>
-                  <Dash />
-                </InlineBlock>
-                <AboutSectionTitle>beloved.</AboutSectionTitle>
-                <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
-                <AboutSection1Tag>Software Developer</AboutSection1Tag>
-              </AboutSection1Content>
-              <AboutImage>
-                <img draggable={false} alt="Me" src={social.me} />
-              </AboutImage>
-            </AboutSection1>
-            <AboutSection2>
-              <AboutSectionTitle>about me</AboutSectionTitle>
-              <AboutText>
-                Welcome to my little corner of the web, where I'll be sharing
-                notes, code snippets, and resources on topics that interest me
-                and updates on projects I'm working on.
-              </AboutText>
-              <AboutText>
-                Where I'll be sharing notes, code snippets, and resources on
-                topics that interest me and updates on projects.
-              </AboutText>
-            </AboutSection2>
-          </AboutContent>
-        </AboutContainer>
+        <SlideInWrapper scrollTriggered={false} stagger={0.5}>
+          <HeroTitle style={{ zIndex: 1 }}>
+            <SlideChild x={100} alt stiffness={80}>
+              i develop
+              <br />
+            </SlideChild>
+            <SlideChild x={100} alt stiffness={80}>
+              software
+            </SlideChild>
+          </HeroTitle>
+          <AboutContainer>
+            <AboutContent>
+              <AboutSection1>
+                <AboutSection1Content>
+                  <InlineBlock>
+                    <AboutSectionTitle>john</AboutSectionTitle>
+                    <Dash />
+                  </InlineBlock>
+                  <AboutSectionTitle>beloved.</AboutSectionTitle>
+                  <AboutSectionTitle>oluwakeye.</AboutSectionTitle>
+                  <AboutSection1Tag>Software Developer</AboutSection1Tag>
+                </AboutSection1Content>
+                <AboutImage>
+                  <img draggable={false} alt="John Oluwakeye" src={social.me} />
+                </AboutImage>
+              </AboutSection1>
+              <AboutSection2>
+                <AboutSectionTitle>about me</AboutSectionTitle>
+                <AboutText>
+                  I'm a pragmatic software developer based in Nigeria with 3
+                  years of professional experience developing web applications.
+                </AboutText>
+                <AboutText>
+                  Currently, I work at Helicarrier as a Frontend Engineer, where
+                  we develop crypto infrastructure for Africa.
+                </AboutText>
+                <AboutText>
+                  In my free time, I play games(Population One / CODM) and watch
+                  movies.
+                </AboutText>
+              </AboutSection2>
+            </AboutContent>
+          </AboutContainer>
+        </SlideInWrapper>
       </Relative>
     </AboutWrapper>
   );
@@ -120,6 +130,7 @@ const AboutSection1 = styled.div`
 
   ${({ theme }) => theme.media.xxl} {
     padding: 0 2rem;
+    padding-right: 0;
   }
 
   ${({ theme }) => theme.media.md} {
@@ -127,6 +138,7 @@ const AboutSection1 = styled.div`
     padding: 0 2rem;
     padding-top: 1rem;
     margin-left: 1.5rem;
+    padding-right: 0;
   }
 `;
 
@@ -203,6 +215,7 @@ const AboutText = styled.p`
 
 const AboutSection1Tag = styled.p`
   font-size: 10px;
+  line-height: 15px;
   color: ${({ theme }) => theme.colors.lightText};
 `;
 

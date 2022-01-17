@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import courses from "../../../data/course";
+import SlideInWrapper from "../../slide-in";
 import CourseItem from "./item";
 
 const Courses = () => {
   return (
-    <CoursesContainer>
-      {courses.map((course, index) => (
-        <CourseItem course={course} key={index} />
-      ))}
-    </CoursesContainer>
+    <SlideInWrapper stagger={0.2}>
+      <CoursesContainer>
+        {courses.map((course, index) => (
+          <CourseItem course={course} key={index} />
+        ))}
+      </CoursesContainer>
+    </SlideInWrapper>
   );
 };
 

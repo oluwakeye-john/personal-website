@@ -10,7 +10,10 @@ import RecentWritings from "../components/writings";
 const Home: NextPage = () => {
   return (
     <>
-      <Seo title="John Oluwakeye | Software Developer" />
+      <Seo
+        title="John Oluwakeye | Software Developer"
+        description="I'm a software developer based in Ibadan, Nigeria. I have 3 years of professional experience developing web applications."
+      />
       <Navbar />
       <Hero />
       <Works />

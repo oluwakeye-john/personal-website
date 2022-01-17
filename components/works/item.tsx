@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Work } from "../../data/works";
 import { cloudinaryImage } from "../../utils/image";
 import LaunchButton from "../launch";
+import { SlideChild } from "../slide-in";
 
 const WorksItem = ({ work }: { work: Work }) => {
   return (

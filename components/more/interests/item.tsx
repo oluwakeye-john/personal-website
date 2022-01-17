@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import svgs from "../../../assets/svgs/svg";
 import { Interest } from "../../../data/interests";
+import { SlideChild } from "../../slide-in";
 
 interface IInterestItem {
   interest: Interest;
@@ -9,13 +10,15 @@ interface IInterestItem {
 
 const InterestItem = ({ interest }: IInterestItem) => {
   return (
-    <ItemContainer>
-      <Image alt="pizza" src={svgs.pizza} />
-      <Content>
-        <Title>{interest.key}</Title>
-        <Text>{interest.value}</Text>
-      </Content>
-    </ItemContainer>
+    <SlideChild y={50}>
+      <ItemContainer>
+        <Image alt="pizza" src={svgs.pizza} />
+        <Content>
+          <Title>{interest.key}</Title>
+          <Text>{interest.value}</Text>
+        </Content>
+      </ItemContainer>
+    </SlideChild>
   );
 };
 

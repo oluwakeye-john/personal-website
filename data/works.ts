@@ -33,7 +33,7 @@ const works: Work[] = [
     image: "v1642181601/portfolio/projects/pollussports_v96zqt.png",
     title: "Pollussports",
     liveUrl: "https://pollusport-frontend.vercel.app/",
-    categories: ["Ecommerce"],
+    categories: ["E-Commerce"],
   },
   {
     index: 5,
@@ -54,7 +54,7 @@ const works: Work[] = [
     image: "v1642181600/portfolio/projects/farmcrowdy_d9yw2t.png",
     title: "Farmcrowdy Foods",
     liveUrl: "https://foods.farmcrowdy.com",
-    categories: ["Ecommerce"],
+    categories: ["E-Commerce"],
   },
   {
     index: 8,

@@ -40,7 +40,7 @@ const TabContainer = styled.div`
 
 const TabItem = styled.div<{ active?: boolean }>`
   color: ${({ active }) => (active ? "#fff" : "rgba(255, 255, 255, 0.7)")};
-  font-weight: ${({ active }) => (active ? "bold" : "400")};
+  font-weight: ${({ active }) => (active ? "500" : "300")} !important;
   margin-right: 3rem;
   text-transform: uppercase;
 

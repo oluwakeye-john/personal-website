@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import interests from "../../../data/interests";
+import SlideInWrapper from "../../slide-in";
 import InterestItem from "./item";
 
 const Interests = () => {
   return (
-    <InterestsContainer>
-      {interests.map((interest, index) => (
-        <InterestItem interest={interest} key={index} />
-      ))}
-    </InterestsContainer>
+    <SlideInWrapper stagger={0.05}>
+      <InterestsContainer>
+        {interests.map((interest, index) => (
+          <InterestItem interest={interest} key={index} />
+        ))}
+      </InterestsContainer>
+    </SlideInWrapper>
   );
 };
 

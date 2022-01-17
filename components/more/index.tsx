@@ -4,8 +4,8 @@ import { stripeButton } from "../button";
 import { Container2, Container3 } from "../container";
 import { YellowDash } from "../dash";
 import { horizontalScroll } from "../scroll";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 import { SectionHeading } from "../text";
-import Awards from "./awards";
 import Courses from "./courses";
 import Experience from "./experience";
 import Interests from "./interests";
@@ -23,10 +23,10 @@ const items = [
     name: "Skills",
     component: Interests,
   },
-  {
-    name: "Awards",
-    component: Awards,
-  },
+  // {
+  //   name: "Awards",
+  //   component: Awards,
+  // },
 ];
 
 const More = () => {
@@ -35,39 +35,45 @@ const More = () => {
   const Component = items[currentIndex].component;
 
   return (
-    <MoreContainer>
-      <MoreHeading>
-        More
-        <br />
-        About Me
-      </MoreHeading>
-      <MoreContent>
-        <MoreMenu>
-          {items.map((item, index) => (
-            <MoreMenuItem
-              tabIndex={0}
-              key={index}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                  setCurentIndex(index);
-                } else {
-                  e.preventDefault();
-                }
-              }}
-              onClick={() => setCurentIndex(index)}
-            >
-              <MoreMenuItemText active={currentIndex === index}>
-                {item.name}
-              </MoreMenuItemText>
-              {currentIndex === index && <MenuDash right />}
-            </MoreMenuItem>
-          ))}
-        </MoreMenu>
-        <MoreDetails>
-          <Component />
-        </MoreDetails>
-      </MoreContent>
-    </MoreContainer>
+    <SlideInWrapper>
+      <MoreContainer>
+        <SlideChild>
+          <MoreHeading>
+            More
+            <br />
+            About Me
+          </MoreHeading>
+        </SlideChild>
+        <MoreContent>
+          <MoreMenu>
+            {items.map((item, index) => (
+              <MoreMenuItem
+                tabIndex={0}
+                key={index}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    setCurentIndex(index);
+                  } else {
+                    e.preventDefault();
+                  }
+                }}
+                onClick={() => setCurentIndex(index)}
+              >
+                <MoreMenuItemText active={currentIndex === index}>
+                  {item.name}
+                </MoreMenuItemText>
+                {currentIndex === index && <MenuDash right />}
+              </MoreMenuItem>
+            ))}
+          </MoreMenu>
+          <MoreDetails>
+            <SlideChild>
+              <Component />
+            </SlideChild>
+          </MoreDetails>
+        </MoreContent>
+      </MoreContainer>
+    </SlideInWrapper>
   );
 };
 

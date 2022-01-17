@@ -1,24 +1,37 @@
 import styled from "styled-components";
 import { Container1, Container4 } from "../container";
 import { SectionDash } from "../dash";
+import SlideInWrapper, { SlideChild } from "../slide-in";
 
 const HeroServices = () => {
   return (
-    <ServicesContainer>
-      <SectionDash text="my services" rightDash />
-      <ServicesContent>
-        <ServicesFlex>
-          <ServiceItem>Branding</ServiceItem>
-          <ServiceItem>Web Development</ServiceItem>
-          <ServiceItem>Mobile Development</ServiceItem>
-        </ServicesFlex>
-        <ServicesFlex>
-          <ServiceItem>SEO/Marketing &nbsp; &nbsp;</ServiceItem>
-          <ServiceItem>Motion & Illustration</ServiceItem>
-          <ServiceItem />
-        </ServicesFlex>
-      </ServicesContent>
-    </ServicesContainer>
+    <SlideInWrapper stagger={0.1} once={false}>
+      <ServicesContainer>
+        <SectionDash text="what i do" rightDash />
+        <ServicesContent>
+          <ServicesFlex>
+            <ServiceItem>
+              <SlideChild y={50}>UI Design</SlideChild>
+            </ServiceItem>
+            <ServiceItem>
+              <SlideChild y={50}>Web Development</SlideChild>
+            </ServiceItem>
+            <ServiceItem>
+              <SlideChild y={50}>Mobile Development</SlideChild>
+            </ServiceItem>
+          </ServicesFlex>
+          <ServicesFlex>
+            <ServiceItem>
+              <SlideChild y={50}>Technical Writing &nbsp; &nbsp;</SlideChild>
+            </ServiceItem>
+            <ServiceItem>
+              <SlideChild y={50}>Embedded Systems / IOT</SlideChild>
+            </ServiceItem>
+            <ServiceItem />
+          </ServicesFlex>
+        </ServicesContent>
+      </ServicesContainer>
+    </SlideInWrapper>
   );
 };
 

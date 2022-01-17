@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container5 } from "./container";
 import Quote from "./quote";
+import SlideInWrapper, { SlideChild } from "./slide-in";
 import { SectionHeading } from "./text";
 
 interface ICustomHeading {
@@ -13,9 +14,15 @@ const CustomHeading = ({ title, description, dark }: ICustomHeading) => {
   return (
     <Container>
       <Content>
-        <Text dark={dark}>{title}</Text>
+        <TextWrapper>
+          <SlideChild stiffness={50}>
+            <Text dark={dark}>{title}</Text>
+          </SlideChild>
+        </TextWrapper>
         <QuoteWrapper>
-          <Quote dark={dark} extend={false} text={description} />
+          <SlideChild stiffness={50}>
+            <Quote dark={dark} extend={false} text={description} />
+          </SlideChild>
         </QuoteWrapper>
       </Content>
     </Container>
@@ -32,15 +39,18 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.h3<{ dark?: boolean }>`
-  ${SectionHeading};
+const TextWrapper = styled.div`
   max-width: 40%;
   padding-right: 2.1rem;
-  color: ${({ dark }) => (dark ? "#fff" : "#000")};
 
   ${({ theme }) => theme.media.lg} {
     max-width: unset;
   }
+`;
+
+const Text = styled.h3<{ dark?: boolean }>`
+  ${SectionHeading};
+  color: ${({ dark }) => (dark ? "#fff" : "#000")};
 `;
 
 const Content = styled.div`
