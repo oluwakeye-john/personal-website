@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Container1 } from "../container";
 
-export const NavbarContainer = styled.div<{ mobileNav?: boolean }>`
+export const NavbarContainer = styled.nav<{ mobileNav?: boolean }>`
   z-index: 5;
   display: flex;
   justify-content: space-between;
