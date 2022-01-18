@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import experiences from "../../../data/experience";
 import SlideInWrapper from "../../slide-in";
+
 import ExperienceItem from "./item";
 
 const Experience = () => {

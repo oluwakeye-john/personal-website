@@ -3,5 +3,5 @@ export const optimizeExternalImage = (url: string, width: number = 1000) => {
 };
 
 export const cloudinaryImage = (cloudinaryPath: string, width = 1000) => {
-  return `https://res.cloudinary.com/johnprops/image/upload/c_scale,f_auto,q_100,w_${width}/${cloudinaryPath}`;
+  return `https://res.cloudinary.com/johnprops/image/upload/f_auto,q_100,w_${width}/${cloudinaryPath}`;
 };

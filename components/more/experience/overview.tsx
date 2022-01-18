@@ -40,8 +40,6 @@ const ExperienceItemOverview = ({
 export default ExperienceItemOverview;
 
 const ExperienceOverview = styled.div`
-  width: 100%;
-
   cursor: pointer;
 
   font-size: 14px;

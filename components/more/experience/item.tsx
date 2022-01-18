@@ -14,18 +14,20 @@ const ExperienceItem = ({ active, onClick, experience }: IExperienceItem) => {
   return (
     <ExperienceItemContainer>
       <SlideChild y={50}>
-        <Tick>
-          <Dot />
-        </Tick>
-        <Control />
-        <Content>
-          <ExperienceItemOverview
-            experience={experience}
-            active={active}
-            onClick={onClick}
-          />
-          <ExperienceItemDetails experience={experience} active={active} />
-        </Content>
+        <Wrapper>
+          <Tick>
+            <Dot />
+          </Tick>
+          <Control />
+          <Content>
+            <ExperienceItemOverview
+              experience={experience}
+              active={active}
+              onClick={onClick}
+            />
+            <ExperienceItemDetails experience={experience} active={active} />
+          </Content>
+        </Wrapper>
       </SlideChild>
     </ExperienceItemContainer>
   );
@@ -33,10 +35,8 @@ const ExperienceItem = ({ active, onClick, experience }: IExperienceItem) => {
 
 export default ExperienceItem;
 
-const ExperienceItemContainer = styled.div`
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 27px;
+const Wrapper = styled.div`
+  width: 100%;
 
   display: flex;
   position: relative;
@@ -44,13 +44,20 @@ const ExperienceItemContainer = styled.div`
   &:last-child > div {
     padding-bottom: 0;
   }
+
+  padding-bottom: 2.5rem;
+`;
+
+const ExperienceItemContainer = styled.div`
+  font-weight: 300;
+  font-size: 13px;
+  width: 100%;
+  line-height: 27px;
 `;
 
 const Content = styled.div`
   width: 100%;
   padding-left: 2rem;
-
-  padding-bottom: 2.5rem;
 
   ${({ theme }) => theme.media.lg} {
     padding-left: 1.5rem;
