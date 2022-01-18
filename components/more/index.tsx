@@ -20,7 +20,7 @@ const items = [
     component: Courses,
   },
   {
-    name: "Skills",
+    name: "Skills & Languages",
     component: Interests,
   },
   // {

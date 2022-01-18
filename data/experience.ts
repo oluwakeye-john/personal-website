@@ -5,6 +5,7 @@ export interface Experience {
   position: string;
   description: string;
   location: string;
+  doings?: string[];
 }
 
 const experiences: Experience[] = [
@@ -13,7 +14,12 @@ const experiences: Experience[] = [
     endDate: "Present",
     company: "Helicarrier",
     description:
-      "I've undertaken more senior responsibilities in addition to my previous role. While advocating for the brand within the company, I help make sure the work we produce adheres to our brand standards by providing guidance and mentorship to other members of the team. I am accountable for my projects as a design lead for their entire lifecycle from conception to completion, and responsible in presenting each stage to stakeholders and the team with rationale for my design decisions. ",
+      "Helicarrier develops crypto infrastructure for Africa (Buycoins / Buycoins Pro / Sendcash / Sendcash Pay / Ramp). At Helicarrier, I've",
+    doings: [
+      "Implemented the P2P feature on Sendcash via CashApp and Zelle",
+      "Fixed bugs and maintained the Buycoins / Buycoins Pro apps",
+      "Improved the performance of the Single Sign-On JavaScript SDK ",
+    ],
     location: "Lagos, Nigeria",
     position: "Frontend Engineer",
   },
@@ -22,16 +28,28 @@ const experiences: Experience[] = [
     endDate: "Present",
     company: "Smarg",
     description:
-      "I've undertaken more senior responsibilities in addition to my previous role. While advocating for the brand within the company, I help make sure the work we produce adheres to our brand standards by providing guidance and mentorship to other members of the team. I am accountable for my projects as a design lead for their entire lifecycle from conception to completion, and responsible in presenting each stage to stakeholders and the team with rationale for my design decisions. ",
-    location: "Lagos, Nigeria",
-    position: "Software Developer",
+      "Smarg is a remote contract facilitator that aims to secure, manage and ensure quality delivery for freelancers. At Smarg, I:",
+    doings: [
+      "Developed the new customer facing website",
+      "Improved the code structure and gave code reviews",
+      "Implemented the new payment method",
+      "Setup workflows and pipelines to aid development process",
+    ],
+    location: "Lagos, Nigeria.",
+    position: "Frontend Developer",
   },
   {
     startDate: "August 2020",
     endDate: "April 2021",
     company: "F&K Savings",
     description:
-      "F&K Savings is a Nigerian FinTech Company that helps you to save, invest, and achieve your financial goals. As a Frontend and Mobile Developer in the Tech team, our focus was good user experience, Test Driven Development(TDD) and a Fast and Secure Payment Interface.",
+      "F&K Savings is a Nigerian FinTech Company that helps you to save, invest, and achieve your financial goals. As a Frontend and Mobile Developer in the Tech team, I",
+    doings: [
+      "Collaborated with other developers to build the new customer facing website",
+      "Improved the load-time of the user dashboard and the overall user experience",
+      "Developed the agent dashboard from scratch",
+      "Integrated analytics tools which effectively provided valuable insight to the growth team",
+    ],
     location: "Ibadan, Nigeria",
     position: "Frontend Developer",
   },
@@ -40,7 +58,12 @@ const experiences: Experience[] = [
     endDate: "May 2020",
     company: "Eaveswall",
     description:
-      "Engage in the interesting discussions and gists that happen on the eaves blogging site and the media wall for all. My team and I built Eaveswall using tools like styled-components, Gatsby and Firebase. At Eaveswall, we focused on optimisation, performance and great user experience. The project comprised of a full fledged Content Management System(CMS) and a payment system",
+      "Engage in the interesting discussions and gists that happen on the eaves blogging site and the media wall for all. At Eaveswall, I:",
+    doings: [
+      "Developed custom monetization logic and paywall for authors.",
+      "Implemented a secure subscription system using Paystack",
+      "Built a full fledged Content Management System",
+    ],
     location: "Ibadan, Nigeria",
     position: "Software Developer",
   },

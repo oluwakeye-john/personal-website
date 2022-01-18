@@ -22,7 +22,14 @@ const ExperienceItemDetails = ({
         <DetailSubtitle>
           {experience.company} - {experience.location}
         </DetailSubtitle>
-        <DetailDescription>{experience.description}</DetailDescription>
+        <DetailDescription>
+          <p>{experience.description}</p>
+          {experience.doings?.map((item, index) => (
+            <ListItem key={index}>
+              {index + 1}: {item}
+            </ListItem>
+          ))}
+        </DetailDescription>
       </Content>
     </ExperienceDetailsContainer>
   );
@@ -86,9 +93,13 @@ const DetailSubtitle = styled.p`
   //
 `;
 
-const DetailDescription = styled.p`
+const DetailDescription = styled.div`
   font-weight: 300;
   line-height: 23.5px;
   color: ${({ theme }) => theme.colors.lightText};
   margin: 0;
+`;
+
+export const ListItem = styled.p`
+  margin: 4px 0;
 `;
