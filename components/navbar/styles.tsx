@@ -84,8 +84,8 @@ export const NavbarRightItem = styled.div`
   cursor: pointer;
 
   svg {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
   }
 
   path {

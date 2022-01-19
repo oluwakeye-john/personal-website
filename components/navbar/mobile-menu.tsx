@@ -2,10 +2,9 @@
 import { motion, useAnimation, Variants } from "framer-motion";
 import Link from "next/link";
 import { useEffect } from "react";
-import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
-import Instagram from "../icons/instagram";
 
 interface IMobileMenu {
   open: boolean;
@@ -96,22 +95,12 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
             </MobileMenuIcon>
             <MobileMenuIcon onClick={toggle}>
               <a
-                href={social.facebook}
+                href={social.twitter}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Facebook"
+                aria-label="Twitter"
               >
-                <FaFacebookF />
-              </a>
-            </MobileMenuIcon>
-            <MobileMenuIcon onClick={toggle}>
-              <a
-                href={social.instagram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram />
+                <FaTwitter />
               </a>
             </MobileMenuIcon>
             <MobileMenuIcon onClick={toggle}>
@@ -122,6 +111,16 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
                 aria-label="Github"
               >
                 <FaGithub />
+              </a>
+            </MobileMenuIcon>
+            <MobileMenuIcon onClick={toggle}>
+              <a
+                href={social.dev}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Dev"
+              >
+                <FaDev />
               </a>
             </MobileMenuIcon>
           </MobileMenuIconContainer>

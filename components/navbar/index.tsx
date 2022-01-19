@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import social from "../../data/social";
-import Instagram from "../icons/instagram";
 import MobileMenu from "./mobile-menu";
 import {
   NavbarCenter,
@@ -82,22 +81,12 @@ const Navbar = () => {
         </NavbarRightItem>
         <NavbarRightItem>
           <a
-            href={social.facebook}
+            href={social.twitter}
             target="_blank"
             rel="noreferrer"
-            aria-label="Facebook"
+            aria-label="Twitter"
           >
-            <FaFacebookF />
-          </a>
-        </NavbarRightItem>
-        <NavbarRightItem>
-          <a
-            href={social.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-          >
-            <Instagram />
+            <FaTwitter />
           </a>
         </NavbarRightItem>
         <NavbarRightItem>
@@ -108,6 +97,16 @@ const Navbar = () => {
             aria-label="Github"
           >
             <FaGithub />
+          </a>
+        </NavbarRightItem>
+        <NavbarRightItem>
+          <a
+            href={social.dev}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Dev"
+          >
+            <FaDev />
           </a>
         </NavbarRightItem>
       </NavbarRight>

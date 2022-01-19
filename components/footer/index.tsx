@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
 import { Container2 } from "../container";
@@ -59,12 +54,12 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
             <a
-              href={social.facebook}
+              href={social.twitter}
               target="_blank"
               rel="noreferrer"
-              aria-label="LinkedIn"
+              aria-label="Twitter"
             >
-              <FaFacebookF />
+              <FaTwitter />
             </a>
             <a
               href={social.github}
@@ -75,12 +70,12 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href={social.instagram}
+              href={social.dev}
               target="_blank"
               rel="noreferrer"
-              aria-label="Instagram"
+              aria-label="Dev"
             >
-              <FaInstagram />
+              <FaDev />
             </a>
           </SocialItem>
         </Right>
