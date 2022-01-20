@@ -60,6 +60,12 @@ export const NavbarRight = styled.div`
 export const NavbarLeftItem = styled.div`
   margin-right: 5rem;
   cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const NavbarCenterItem = styled.h2<{ dark?: boolean }>`

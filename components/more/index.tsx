@@ -131,7 +131,6 @@ const MoreMenuItem = styled.div`
   cursor: pointer;
   ${stripeButton};
 
-  /* font-family: ${({ theme }) => theme.fontFamilies.heading}; */
   font-family: ${({ theme }) => theme.fontFamilies.alt};
 
   ${({ theme }) => theme.media.lg} {

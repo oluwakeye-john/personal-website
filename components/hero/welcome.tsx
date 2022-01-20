@@ -11,8 +11,8 @@ const HeroWelcome = () => {
       <TopFlex>
         <WelcomeLeft />
         <Quote
-          text="Welcome to my little corner of the web, where I'll be sharing notes,
-            code snippets, and resources on topics that interest me and updates
+          text="Welcome to my little corner of the web, where I'll be sharing updates about myself,
+              resources on topics that interest me and updates
             on projects I'm working on."
         />
       </TopFlex>

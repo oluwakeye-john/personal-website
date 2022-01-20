@@ -42,5 +42,5 @@ const QuoteText = styled.div<{ dark?: boolean; extend?: boolean }>`
 
   font-weight: 300;
   font-size: 13px;
-  line-height: 140.5%;
+  line-height: 155%;
 `;

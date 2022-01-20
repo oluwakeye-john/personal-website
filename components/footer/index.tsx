@@ -165,7 +165,7 @@ const FooterItem = styled.div`
   transition: 0.3s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.lightPrimary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   a {

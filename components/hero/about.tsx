@@ -11,7 +11,7 @@ const HeroAbout = () => {
   return (
     <AboutWrapper>
       <Relative>
-        <SlideInWrapper scrollTriggered={false} stagger={0.3}>
+        <SlideInWrapper scrollTriggered stagger={0.3}>
           <HeroTitle style={{ zIndex: 1 }}>
             <SlideChild x={100} alt stiffness={80}>
               i develop
