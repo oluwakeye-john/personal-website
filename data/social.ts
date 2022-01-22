@@ -12,7 +12,7 @@ export interface Social {
 }
 
 const social: Social = {
-  me: "https://res.cloudinary.com/johnprops/image/upload/c_scale,f_auto,q_100,w_500/v1642245700/portfolio/me_fjwljv.png",
+  me: "/images/me.png",
   email: "bjohnoluwakeye@gmail.com",
   facebook: "https://facebook.com/oluwakeye.john.3",
   dev: "https://dev.to/oluwakeyejohn",

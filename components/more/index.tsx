@@ -30,10 +30,6 @@ const items = [
 ];
 
 const More = () => {
-  const [currentIndex, setCurentIndex] = useState(0);
-
-  const Component = items[currentIndex].component;
-
   return (
     <SlideInWrapper>
       <MoreContainer>
@@ -44,36 +40,45 @@ const More = () => {
             About Me
           </MoreHeading>
         </SlideChild>
-        <MoreContent>
-          <MoreMenu>
-            {items.map((item, index) => (
-              <MoreMenuItem
-                tabIndex={0}
-                key={index}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") {
-                    setCurentIndex(index);
-                  } else {
-                    e.preventDefault();
-                  }
-                }}
-                onClick={() => setCurentIndex(index)}
-              >
-                <MoreMenuItemText active={currentIndex === index}>
-                  {item.name}
-                </MoreMenuItemText>
-                {currentIndex === index && <MenuDash right />}
-              </MoreMenuItem>
-            ))}
-          </MoreMenu>
-          <MoreDetails>
-            <SlideChild>
-              <Component />
-            </SlideChild>
-          </MoreDetails>
-        </MoreContent>
+        <MainContent />
       </MoreContainer>
     </SlideInWrapper>
+  );
+};
+
+const MainContent = () => {
+  const [currentIndex, setCurentIndex] = useState(0);
+
+  const Component = items[currentIndex].component;
+  return (
+    <MoreContent>
+      <MoreMenu>
+        {items.map((item, index) => (
+          <MoreMenuItem
+            tabIndex={0}
+            key={index}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                setCurentIndex(index);
+              } else {
+                e.preventDefault();
+              }
+            }}
+            onClick={() => setCurentIndex(index)}
+          >
+            <MoreMenuItemText active={currentIndex === index}>
+              {item.name}
+            </MoreMenuItemText>
+            {currentIndex === index && <MenuDash right />}
+          </MoreMenuItem>
+        ))}
+      </MoreMenu>
+      <MoreDetails>
+        <SlideChild>
+          <Component />
+        </SlideChild>
+      </MoreDetails>
+    </MoreContent>
   );
 };
 

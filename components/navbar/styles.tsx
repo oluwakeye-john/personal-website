@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { stripeButton } from "../button";
 import { Container1 } from "../container";
 
 export const NavbarContainer = styled.nav<{ mobileNav?: boolean }>`
@@ -130,6 +131,11 @@ export const NavbarToggleContent = styled.div<{ open: boolean }>`
       transform-origin: 5% 90%;
     }
   }
+`;
+
+export const NavbarLinkButton = styled.button`
+  ${stripeButton};
+  font-size: inherit;
 `;
 
 export const NavbarToggle = styled.button<{ open?: boolean }>`

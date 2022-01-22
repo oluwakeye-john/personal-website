@@ -10,7 +10,7 @@ const Seo = ({ title, description }: SeoProps) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="shortcut icon" href="/icon.png" />
+      <link rel="shortcut icon" href="/icon0.png" />
       <link rel="canonical" href="https://oluwakeye.com" />
 
       <meta name="description" content={description} />
@@ -19,7 +19,7 @@ const Seo = ({ title, description }: SeoProps) => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={social.me} />
       <meta property="og:url" content="https://oluwakeye.com" />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
     </Head>
   );
 };

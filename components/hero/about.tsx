@@ -204,9 +204,9 @@ const AboutImage = styled.div`
     user-select: none;
     pointer-events: none;
 
-    width: auto;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: bottom;
   }
 
@@ -224,6 +224,10 @@ const AboutImage = styled.div`
 
   ${({ theme }) => theme.media.md} {
     height: 280px;
+  }
+
+  ${({ theme }) => theme.media.xs} {
+    height: 200px;
   }
 `;
 

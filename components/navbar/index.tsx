@@ -9,6 +9,7 @@ import {
   NavbarContainer,
   NavbarLeft,
   NavbarLeftItem,
+  NavbarLinkButton,
   NavbarRight,
   NavbarRightItem,
   NavbarToggle,
@@ -36,13 +37,19 @@ const Navbar = () => {
     };
   }, []);
 
+  const onClick = () => {
+    document.querySelector("#works")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <NavbarContainer mobileNav={mobileNav}>
       <NavbarLeft>
         <NavbarLeftItem>
-          <Link href="/#works">
+          <NavbarLinkButton onClick={onClick}>
             <a>My Works</a>
-          </Link>
+          </NavbarLinkButton>
         </NavbarLeftItem>
         <NavbarLeftItem>
           <a href={social.resume} target="_blank" rel="noreferrer">

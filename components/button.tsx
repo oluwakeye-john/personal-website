@@ -4,6 +4,7 @@ export const stripeButton = css`
   background-color: transparent;
   border: none;
   color: inherit;
+  padding: 0;
   font-weight: inherit;
-  /* outline: none; */
+  font-family: ${({ theme }) => theme.fontFamilies.normal};
 `;

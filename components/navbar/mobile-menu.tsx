@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 import social from "../../data/social";
+import { NavbarLinkButton } from "./styles";
 
 interface IMobileMenu {
   open: boolean;
@@ -56,14 +57,20 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
     }
   }, [open]);
 
+  const onClick = () => {
+    document.querySelector("#works")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <motion.div variants={variants} animate={animation} initial="hidden">
       <MobileMenuContainer open={open}>
         <motion.div variants={v}>
           <MobileMenuItem onClick={toggle}>
-            <Link href="/#works">
+            <NavbarLinkButton onClick={onClick}>
               <a>My Works</a>
-            </Link>
+            </NavbarLinkButton>
           </MobileMenuItem>
         </motion.div>
         <motion.div variants={v}>

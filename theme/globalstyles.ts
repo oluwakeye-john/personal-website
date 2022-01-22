@@ -18,10 +18,6 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
-    html,body{
-        height:-webkit-fill-available;
-    }
-
     * {
         &:focus{
             outline-color: ${({ theme }) => theme.colors.primary};
