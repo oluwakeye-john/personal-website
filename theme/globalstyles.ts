@@ -8,10 +8,6 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    html {
-        overflow-x: hidden;
-    }
-
     body {
         margin: 0;
         padding: 0;
@@ -20,6 +16,10 @@ export const GlobalStyles = createGlobalStyle`
         font-size: ${({ theme }) => theme.fontSizes.m};
         line-height: 140.5%;
         overflow-x: hidden;
+    }
+
+    html,body{
+        height:-webkit-fill-available;
     }
 
     * {

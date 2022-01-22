@@ -1,6 +1,6 @@
 import { motion, useAnimation, Variants } from "framer-motion";
 import styled from "styled-components";
-import Bubble from "./icons/bubble";
+import Bubble3 from "./icons/bubble3";
 
 const Loader = ({ setDone }: any) => {
   const animation = useAnimation();
@@ -8,7 +8,7 @@ const Loader = ({ setDone }: any) => {
   const variants: Variants = {
     initial: {},
     final: {
-      scale: 10,
+      scale: 7,
       opacity: 0,
       transition: {
         type: "spring",
@@ -27,7 +27,7 @@ const Loader = ({ setDone }: any) => {
         initial="initial"
         animate={animation}
       >
-        <Bubble
+        <Bubble3
           onDone={() => {
             animation.start("final");
           }}
@@ -43,6 +43,12 @@ const LoaderContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    ${({ theme }) => theme.media.sm} {
+      height: -webkit-fill-available;
+    }
+  }
 
   display: flex;
   justify-content: center;
