@@ -68,9 +68,7 @@ const MobileMenu = ({ open, toggle }: IMobileMenu) => {
       <MobileMenuContainer open={open}>
         <motion.div variants={v}>
           <MobileMenuItem onClick={toggle}>
-            <NavbarLinkButton onClick={onClick}>
-              <a>My Works</a>
-            </NavbarLinkButton>
+            <NavbarLinkButton onClick={onClick}>My Works</NavbarLinkButton>
           </MobileMenuItem>
         </motion.div>
         <motion.div variants={v}>

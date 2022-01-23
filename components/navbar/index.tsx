@@ -47,9 +47,7 @@ const Navbar = () => {
     <NavbarContainer mobileNav={mobileNav}>
       <NavbarLeft>
         <NavbarLeftItem>
-          <NavbarLinkButton onClick={onClick}>
-            <a>My Works</a>
-          </NavbarLinkButton>
+          <NavbarLinkButton onClick={onClick}>My Works</NavbarLinkButton>
         </NavbarLeftItem>
         <NavbarLeftItem>
           <a href={social.resume} target="_blank" rel="noreferrer">
