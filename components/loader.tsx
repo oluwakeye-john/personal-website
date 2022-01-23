@@ -1,6 +1,6 @@
 import { motion, useAnimation, Variants } from "framer-motion";
 import styled from "styled-components";
-import Bubble3 from "./icons/bubble3";
+import Bubble3 from "./icons/bubble";
 
 const Loader = ({ setDone }: any) => {
   const animation = useAnimation();
