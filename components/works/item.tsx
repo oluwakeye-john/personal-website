@@ -9,7 +9,7 @@ const WorksItem = ({ work }: { work: Work }) => {
   return (
     <WorksItemContainer>
       <WorksItemContent>
-        <img alt={work.title} src={cloudinaryImage(work.image, 650)} />
+        <img alt={work.title} src={cloudinaryImage(work.image, 800)} />
         <LaunchButton text1="launch" text2="app" url={work.liveUrl} />
       </WorksItemContent>
       <WorksItemCaption>{work.title}</WorksItemCaption>

@@ -31,7 +31,7 @@ const ExperienceItemOverview = ({
       </OverviewTitle>
       <OverviewDate>{experience.startDate}</OverviewDate>
       <Arrow active={active}>
-        <Image alt="Andela" src={svgs.arrow_down} />
+        <Image alt="dropdown" src={svgs.arrow_down} />
       </Arrow>
     </ExperienceOverview>
   );
