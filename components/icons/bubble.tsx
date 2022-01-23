@@ -84,19 +84,7 @@ const waterFColor = "#4CE2B2";
 const waterBColor = "#abffe4";
 
 const Container = styled.div`
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    outline: none;
-  }
   font-family: ${({ theme }) => theme.fontFamilies.alt};
-
-  body {
-    background: $bgColor;
-    font: 14px/1 "Open Sans", helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
 
   .box {
     height: 280px;
