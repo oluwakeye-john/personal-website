@@ -13,7 +13,7 @@ export interface Social {
 
 const social: Social = {
   me: "https://res.cloudinary.com/johnprops/image/upload/f_auto,q_100/v1642912008/portfolio/Image_5_mdrjcr.png",
-  email: "bjohnoluwakeye@gmail.com",
+  email: "hello@oluwakeye.com",
   facebook: "https://facebook.com/oluwakeye.john.3",
   dev: "https://dev.to/oluwakeyejohn",
   github: "https://github.com/oluwakeye-john",
@@ -22,7 +22,7 @@ const social: Social = {
   linkedIn: "https://www.linkedin.com/in/oluwakeye-john-1706/",
   phone: "+234 705 364 3618",
   resume:
-    "https://drive.google.com/file/d/1FBJa0LeD8vFW1eVcYCEHMNAoFr-VjXGh/view?usp=sharing",
+    "https://drive.google.com/file/d/1QjJwpqIKSZeKobXkbhnUZ1dCWw5Emmcv/view?usp=sharing",
 };
 
 export default social;
