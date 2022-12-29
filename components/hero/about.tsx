@@ -47,15 +47,16 @@ const HeroAbout = () => {
                 <AboutSectionTitleSpaced>about me</AboutSectionTitleSpaced>
                 <AboutText>
                   I'm a pragmatic software developer based in Nigeria with 3
-                  years of professional experience developing web applications.
+                  years of professional experience developing web and mobile
+                  applications.
                 </AboutText>
                 <AboutText>
                   Currently, I work at Helicarrier as a Frontend Engineer, where
                   we develop crypto infrastructure for Africa.
                 </AboutText>
                 <AboutText>
-                  In my free time, I play games(Population One / CODM) and watch
-                  movies.
+                  In my free time, I play the piano, read books and play video
+                  games.
                 </AboutText>
               </AboutSection2>
             </AboutContent>

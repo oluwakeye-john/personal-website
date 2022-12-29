@@ -14,18 +14,18 @@ const experiences: Experience[] = [
     endDate: "Present",
     company: "Helicarrier",
     description:
-      "Helicarrier develops crypto infrastructure for Africa (Buycoins / Buycoins Pro / Sendcash / Sendcash Pay / Ramp). At Helicarrier, I've",
+      "Helicarrier develops crypto infrastructure for Africa (Buycoins / Buycoins Pro / Sendcash / Sendcash Pay / Ramp). At Helicarrier, I:",
     doings: [
       "Implemented the P2P feature on Sendcash via CashApp and Zelle",
       "Fixed bugs and maintained the Buycoins / Buycoins Pro apps",
       "Improved the performance of the Single Sign-On JavaScript SDK ",
     ],
     location: "Lagos, Nigeria",
-    position: "Frontend Engineer",
+    position: "Senior Frontend Engineer",
   },
   {
-    startDate: "May 2021",
-    endDate: "Present",
+    startDate: "August 2020",
+    endDate: "Jan 2021",
     company: "Smarg",
     description:
       "Smarg is a remote contract facilitator that aims to secure, manage and ensure quality delivery for freelancers. At Smarg, I:",
